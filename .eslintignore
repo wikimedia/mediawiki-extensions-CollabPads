@@ -1,0 +1,9 @@
+vendor/
+
+resources/ve/ve.init.mw.DesktopCollabTarget.js
+resources/ve/ve.init.mw.CollabTarget.js
+resources/tools/collabpad.ui.InvalidChangeDialog.js
+resources/tools/collabpad.ui.ExportWikitextDialog.js
+resources/store/collabpad.store.Sessions.js
+resources/socket.io/socket.io.min.js
+resources/ext.collabpads.CollabTarget.init.js
