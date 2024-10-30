@@ -157,9 +157,10 @@ class MongoDBCollabSessionDAO extends MongoDBDAOBase implements ICollabSessionDA
 				],
 				'$pop' => [
 					's_authors.$.connection' => 1
-				]
+				],
 			]
 		);
+		$this->clearAuthorRebaseData( $sessionId, $authorId );
 	}
 
 	/**
@@ -247,6 +248,24 @@ class MongoDBCollabSessionDAO extends MongoDBDAOBase implements ICollabSessionDA
 			$stores = [ $stores ];
 		}
 		return new Change( $cb['start'], $cb['transactions'], $cb['selections'] ?? [], $stores );
+	}
+
+	/**
+	 * @param int $sessionId
+	 * @param int $authorId
+	 * @return void
+	 */
+	public function clearAuthorRebaseData( int $sessionId, int $authorId ) {
+		// Clear continue base and rejections
+		$this->collection->updateOne(
+			[ 's_id' => $sessionId, 's_authors.authorId' => $authorId ],
+			[
+				'$unset' => [
+					's_authors.$.continueBase' => '',
+					's_authors.$.rejections' => ''
+				]
+			]
+		);
 	}
 
 	/**

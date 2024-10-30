@@ -139,6 +139,7 @@ class MessageHandler {
 								'backtrace' => $e->getTraceAsString(),
 								'line' => $e->getLine(),
 							] );
+							$this->sessionDAO->clearAuthorRebaseData( $msgArgs['sessionId'], $author->getId() );
 							if ( $this->config['behaviourOnError'] === 'reinit' ) {
 								$this->logger->info( 'Sending re-initialization message' );
 								$this->reInitForClient( $msgArgs['sessionId'], $author );

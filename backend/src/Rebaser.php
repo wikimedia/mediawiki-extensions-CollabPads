@@ -96,7 +96,6 @@ class Rebaser implements LoggerAwareInterface {
 			$this->sessionChange = $this->session->getChange( $sessionId );
 			$base = $base->concat( $this->sessionChange->mostRecent( $base->getStart() + $base->getLength() ) );
 			$result = $this->rebaseUncommittedChange( $base, $change );
-			$this->logger->debug( "Rebase of uncommited change", $result );
 			$rejections = $result['rejected'] ? $result['rejected']->getLength() : 0;
 			$this->session->changeAuthorDataInSession( $sessionId, $author->getId(), 'rejections', $rejections );
 			$this->session->changeAuthorDataInSession(
@@ -140,7 +139,6 @@ class Rebaser implements LoggerAwareInterface {
 				return $this->rebaseUncommittedChange( $base, $uncommited );
 			}
 
-			$this->logger->error( 'Different starts: ' . $base->getStart() . ' and ' . $uncommited->getStart() );
 			throw new Exception( 'Different starts: ' . $base->getStart() . ' and ' . $uncommited->getStart() );
 		}
 

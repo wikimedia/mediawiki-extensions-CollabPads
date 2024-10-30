@@ -145,4 +145,11 @@ interface ICollabSessionDAO {
 	 * @return mixed
 	 */
 	public function replaceHistory( int $sessionId, Change $change );
+
+	/**
+	 * @param int $sessionId
+	 * @param int $authorId
+	 * @return mixed
+	 */
+	public function clearAuthorRebaseData( int $sessionId, int $authorId );
 }

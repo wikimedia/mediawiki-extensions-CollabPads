@@ -100,6 +100,14 @@ class Transaction implements \JsonSerializable {
 				$offset += $this->operationLen( $op['insert'] );
 				$diff += $this->operationLen( $op['insert'] ) - $this->operationLen( $op['remove'] );
 			}
+			if ( $op['type'] === 'attribute' || $op['type'] === 'replaceMetadata' ) {
+				// Op with length 0 but that effectively modifies 1 position
+				$end = $offset + 1;
+				$endOpIndex = $i + 1;
+			} elseif ( $active ) {
+				$end = $offset;
+				$endOpIndex = $i + 1;
+			}
 		}
 
 		return [
@@ -131,12 +139,15 @@ class Transaction implements \JsonSerializable {
 			} elseif ( $ops[$i]['length'] === 0 ) {
 				array_splice( $ops, $i, 1 );
 			}
+			$this->operations = $ops;
 			return;
 		}
 		if ( $diff < 0 ) {
 			throw new \Error( 'Negative retain length' );
 		}
-		$ops = array_splice( $ops, $start ? 0 : count( $ops ), 0, [ 'type' => 'retain', 'length' => $diff ] );
+		$this->operations = array_splice(
+			$ops, $start ? 0 : count( $ops ), 0, [ 'type' => 'retain', 'length' => $diff ]
+		);
 	}
 
 	/**
