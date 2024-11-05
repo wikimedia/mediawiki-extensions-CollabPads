@@ -68,6 +68,9 @@
 			"collabpadsessions-admin": true
 		}
 	},
+	"AvailableRights": [
+		"collabpadsessions-admin"
+	],
 	"RecentChangesFlags": {
 		"collab-edit": {
 			"letter": "collabpads-recentchangesflags-letter",
