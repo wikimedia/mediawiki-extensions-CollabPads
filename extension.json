@@ -58,7 +58,7 @@
 		"MediaWiki\\Extension\\CollabPads\\": "src/"
 	},
 	"TestAutoloadNamespaces": {
-		"MediaWiki\\Extension\\CollabPads\\Tests": "tests/phpunit"
+		"MediaWiki\\Extension\\CollabPads\\Tests\\": "tests/phpunit"
 	},
 	"GroupPermissions": {
 		"*": {
