@@ -48,6 +48,7 @@
 	"collabpads-owner-label": "Label for \"Owner\"",
 	"collabpads-participants-label": "Label for \"Participants\"",
 	"collabpads-bs-saferedit-editing": "Text in the BlueSpiceSaferEdit banner for the page being edited. Parameters:\n* $1 - contains the link to edit the page",
+	"collabpads-bs-saferedit-editing-link-text": "Text for the link to join the collaborative editing session in the BlueSpiceSaferEdit banner",
 	"collabpads-normal-edit-blocked": "Message which is shown in VE during normal edit, if there is already a collaborative session running on the page",
 	"collabpads-save-complete-notif": "Toast notification when a page is saved",
 	"collabpads-last-edit-info": "Last edit sentence with author, date and \"& others\". Parameters:\n* $1 - date of the last edit\n* $2 - author of the last edit",
