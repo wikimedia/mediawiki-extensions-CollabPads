@@ -283,20 +283,6 @@
 			"styles": [
 				"styles/ve/ve.init.mw.DesktopArticleTarget.css"
 			],
-			"skinStyles": {
-				"vector": [
-					"includes/ve/mw/ve-mw/init/styles/ve.init.mw.DesktopArticleTarget-vector.css"
-				],
-				"apex": [
-					"includes/ve/mw/ve-mw/init/styles/ve.init.mw.DesktopArticleTarget-apex.css"
-				],
-				"monobook": [
-					"includes/ve/mw/ve-mw/init/styles/ve.init.mw.DesktopArticleTarget-monobook.css"
-				],
-				"minerva": [
-					"includes/ve/mw/ve-mw/init/styles/ve.init.mw.DesktopArticleTarget-minerva.css"
-				]
-			},
 			"dependencies": [
 				"ext.CollabPads.collabTarget",
 				"ext.visualEditor.core.desktop",
