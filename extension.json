@@ -185,6 +185,9 @@
 			"i18n"
 		]
 	},
+	"ExtensionMessagesFiles": {
+		"CollabPadSessions": "languages/CollabPadSessions.alias.php"
+	},
 	"ResourceModules": {
 		"ext.collabPads": {
 			"scripts": [
