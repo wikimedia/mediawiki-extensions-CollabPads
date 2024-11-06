@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kareyac"
+		]
+	},
+	"collabpads-start-dialog-show-again": "Не показывать это сообщение повторно",
+	"collabpads-toolbar-save-button": "Сохранить изменения…",
+	"collabpads-save-dialog-save-button": "Сохранить изменения",
+	"collabpads-dialog-accept-button": "Принять",
+	"collabpads-copylink-label": "Копировать ссылку приглашения",
+	"collabpads-page-label": "Страница",
+	"collabpads-participants-label": "Участники",
+	"collabpads-invalid-change-dialog-delete-button": "Удалить",
+	"collabpads-invalid-change-dialog-save-button": "Сохранить"
+}
