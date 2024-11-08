@@ -3,7 +3,7 @@
 namespace MediaWiki\Extension\CollabPads\HookHandler;
 
 use BlueSpice\SaferEdit\Hook\BSSaferEditMessage;
-use Message;
+use Html;
 use RequestContext;
 use Title;
 use Wikimedia\Rdbms\LoadBalancer;
@@ -64,6 +64,13 @@ class SaferEditMessage implements BSSaferEditMessage {
 	 */
 	private function makeCollabPadsMessage( Title $title ): string {
 		$collabPadsEditLink = $title->getFullURL( [ 'veaction' => 'collab-edit' ] );
-		return Message::newFromKey( 'collabpads-bs-saferedit-editing', $collabPadsEditLink )->parse();
+		$linkHtml = Html::element( 'a',
+			[ 'href' => $collabPadsEditLink	],
+			wfMessage( 'collabpads-bs-saferedit-editing-link-text' )->text()
+		);
+
+		$messageHtml = wfMessage( 'collabpads-bs-saferedit-editing' )->params( $linkHtml )->plain();
+
+		return $messageHtml;
 	}
 }
