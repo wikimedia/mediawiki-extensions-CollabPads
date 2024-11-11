@@ -378,7 +378,7 @@ ve.dm.SurfaceSynchronizer.prototype.onAuthorChange = function ( data, init = fal
 	// Notify when a new author joins
 	if ( !init && !this.authors[ authorId ] ) {
 		const name = authorData.realName ? authorData.realName : authorData.name;
-		const msg = mw.msg( 'collabpads-author-join', name );
+		const msg = mw.msg( 'collabpads-author-join', name, authorData.name );
 		mw.notify( msg, { type: 'warn' } );
 	}
 
@@ -397,7 +397,7 @@ ve.dm.SurfaceSynchronizer.prototype.changeAuthor = function ( data ) {
 ve.dm.SurfaceSynchronizer.prototype.onAuthorDisconnect = function ( authorId ) {
 	const realName = this.authors[ authorId ].realName;
 	const name = realName || this.authors[ authorId ].name;
-	const msg = mw.msg( 'collabpads-author-leave', name );
+	const msg = mw.msg( 'collabpads-author-leave', name, this.authors[ authorId ].name );
 	mw.notify( msg, { type: 'warn' } );
 	delete this.authors[ authorId ];
 	delete this.authorSelections[ authorId ];
@@ -441,7 +441,7 @@ ve.dm.SurfaceSynchronizer.prototype.onSaveRevision = function ( authorId ) {
 	if ( this.authors[ authorId ] ) {
 		const realName = this.authors[ authorId ].realName;
 		const name = realName || this.authors[ authorId ].name;
-		const msg = mw.msg( 'collabpads-author-save', name );
+		const msg = mw.msg( 'collabpads-author-save', name, this.authors[ authorId ].name );
 		mw.notify( msg, { type: 'warn' } );
 	}
 };
