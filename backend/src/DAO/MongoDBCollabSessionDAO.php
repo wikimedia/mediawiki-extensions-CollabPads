@@ -330,7 +330,6 @@ class MongoDBCollabSessionDAO extends MongoDBDAOBase implements ICollabSessionDA
 		// Maybe we should store selections
 		$selections = [];
 		$sessionChange = new Change( 0, $transactions, $selections, $stores );
-		$this->logger->debug( "Retrieved session change", [ json_encode( $sessionChange ) ] );
 		return $sessionChange;
 	}
 
