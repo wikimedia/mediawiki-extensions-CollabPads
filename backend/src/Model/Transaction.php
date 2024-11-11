@@ -51,16 +51,26 @@ class Transaction implements \JsonSerializable {
 				$expanded[] = [ 'type' => 'retain' , 'length' => $op ];
 				continue;
 			}
-			if ( is_array( $op ) ) {
+			if ( static::isLinearArray( $op ) ) {
 				$expanded[] = [
 					'type' => 'replace',
 					'remove' => static::deminifyLinearData( $op[0] ),
 					'insert' => static::deminifyLinearData( $op[1] )
 				];
+			} else {
+				$expanded[] = $op;
 			}
 		}
 
 		return $expanded;
+	}
+
+	/**
+	 * @param mixed $op
+	 * @return bool
+	 */
+	private static function isLinearArray( $op ): bool {
+		return is_array( $op ) && array_keys( $op ) === range( 0, count( $op ) - 1 );
 	}
 
 	/**
@@ -158,7 +168,15 @@ class Transaction implements \JsonSerializable {
 			if ( $op['type'] === 'retain' ) {
 				return $op['length'];
 			}
-			return [ $this->minifyLinearData( $op['remove'] ), $this->minifyLinearData( $op['insert'] ) ];
+			$insertLength = isset( $op['insert'] ) ? $this->operationLen( $op['insert'] ) : 0;
+			if (
+				$op['type'] === 'replace' &&
+				( !isset( $op['insertedDataOffset' ] ) || !$op['insertedDataOffset'] ) &&
+				( !isset( $op['insertedDataLength' ] ) || $op['insertedDataLength'] === $insertLength )
+			) {
+				return [ $this->minifyLinearData( $op['remove'] ), $this->minifyLinearData( $op['insert'] ) ];
+			}
+			return $op;
 		}, $this->operations );
 
 		if ( $this->author !== null ) {
@@ -262,6 +280,9 @@ class Transaction implements \JsonSerializable {
 	 */
 	private function operationLen( mixed $op ): int {
 		if ( is_array( $op ) ) {
+			if ( isset( $op['length'] ) ) {
+				return (int)$op['length'];
+			}
 			return count( $op );
 		}
 		return strlen( $op ) ?? 0;
