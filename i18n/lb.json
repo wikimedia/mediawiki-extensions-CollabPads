@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Volvox"
+		]
+	},
+	"collabpads-content-action-text": "Zesummen änneren",
+	"collabpads-start-dialog-title": "Wëllkomm am Modus „Zesummen änneren“!",
+	"collabpads-start-dialog-show-again": "Dëse Message net nach eng Kéier weisen",
+	"collabpads-toolbar-save-button": "Ännerunge späicheren…",
+	"collabpads-save-dialog-title": "Är Ännerunge späicheren",
+	"collabpads-save-dialog-save-button": "Ännerunge späicheren",
+	"collabpads-save-dialog-summary": "Resumé:",
+	"collabpads-save-dialog-minor-edit": "Dëst ass eng kleng Ännerung",
+	"collabpads-save-dialog-watch-page": "Dës Säit iwwerwaachen",
+	"collabpads-dialog-cancel-button": "Ofbriechen",
+	"collabpads-dialog-accept-button": "Akzeptéieren",
+	"collabpads-copylink-label": "Invitatiounslink kopéieren",
+	"collabpads-author-save": "huet gespäichert",
+	"collabpads-namespace-label": "Nummraum",
+	"collabpads-page-label": "Säit",
+	"collabpads-owner-label": "Besëtzer",
+	"collabpads-participants-label": "Participanten",
+	"collabpads-save-complete-notif": "Säit gespäichert",
+	"collabpads-invalid-change-dialog-title": "Ongülteg Ännerung",
+	"collabpads-invalid-change-dialog-delete-button": "Läschen",
+	"collabpads-invalid-change-dialog-save-button": "Späicheren"
+}
