@@ -45,9 +45,9 @@ interface ICollabSessionDAO {
 	 * @param int $sessionId
 	 * @param int $authorId
 	 * @param string $authorData
-	 * @param string $authorValue
+	 * @param mixed $authorValue
 	 */
-	public function changeAuthorDataInSession( int $sessionId, int $authorId, string $authorData, string $authorValue );
+	public function changeAuthorDataInSession( int $sessionId, int $authorId, string $authorData, mixed $authorValue );
 
 	/**
 	 * @param int $sessionId

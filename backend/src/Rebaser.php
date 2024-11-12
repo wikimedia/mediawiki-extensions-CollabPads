@@ -57,7 +57,7 @@ class Rebaser implements LoggerAwareInterface {
 	 */
 	public function applyChange( int $sessionId, Author $author, int $backtrack, Change $change ): Change {
 		$this->sessionChange = null;
-		$this->logger->debug( "Rebasing change", [
+		$this->logger->info( "Rebasing change", [
 			'author' => json_encode( $author ),
 			'change' => json_encode( $change ),
 			'backtrack' => $backtrack,
@@ -97,9 +97,29 @@ class Rebaser implements LoggerAwareInterface {
 			$base = $base->concat( $this->sessionChange->mostRecent( $base->getStart() + $base->getLength() ) );
 			$result = $this->rebaseUncommittedChange( $base, $change );
 			$rejections = $result['rejected'] ? $result['rejected']->getLength() : 0;
-			$this->session->changeAuthorDataInSession( $sessionId, $author->getId(), 'rejections', $rejections );
+			$sessionChange = $this->getSessionChange();
+			if ( $sessionChange instanceof Change ) {
+				if ( !$result['rebased']->isEmpty() ) {
+					// Update session with newly applied change
+					$sessionChange->push( $result['rebased'] );
+					$this->session->replaceHistory( $sessionId, $sessionChange );
+				}
+			} else {
+				// Prevent broken session: if change is rebased, and will be emitted,
+				// session change MUST also be updated
+				throw new Exception( 'Change rebased, but no session change retrieved' );
+			}
 			$this->session->changeAuthorDataInSession(
-				$sessionId, $author->getId(), 'continueBase', json_encode( $result['transposedHistory'] )
+				$sessionId,
+				$author->getId(),
+				'rejections',
+				$rejections
+			);
+			$this->session->changeAuthorDataInSession(
+				$sessionId,
+				$author->getId(),
+				'continueBase',
+				json_decode( json_encode( $result['transposedHistory'] ), true )
 			);
 			$appliedChange = $result['rebased'];
 		}
@@ -238,6 +258,29 @@ class Rebaser implements LoggerAwareInterface {
 	}
 
 	/**
+	 * If we have same transactions in a and b, we can filter them out
+	 * @param array $a
+	 * @param array $b
+	 * @return array
+	 */
+	private function filterOutDuplicates( array $a, array $b ): array {
+		$actual = [];
+		foreach ( $a as $aItem ) {
+			$found = false;
+			foreach ( $b as $bItem ) {
+				if ( $aItem->equals( $bItem ) ) {
+					$found = true;
+					break;
+				}
+			}
+			if ( !$found ) {
+				$actual[] = $aItem;
+			}
+		}
+		return $actual;
+	}
+
+	/**
 	 * @param Transaction $a
 	 * @param Transaction $b
 	 * @return array|null[]
@@ -260,6 +303,12 @@ class Rebaser implements LoggerAwareInterface {
 			$a->adjustRetain( 'start', $infoB['diff'] );
 			$b->adjustRetain( 'end', $infoA['diff'] );
 		} else {
+			$this->logger->error( 'Failed to rebase transactions', [
+				'a' => $a,
+				'b' => $b,
+				'infoA' => $infoA,
+				'infoB' => $infoB
+			] );
 			// The active ranges overlap: conflict
 			return [ null, null ];
 		}

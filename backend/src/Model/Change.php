@@ -129,7 +129,7 @@ class Change implements \JsonSerializable {
 	 */
 	public function concat( Change $otherChange ): Change {
 		if ( $otherChange->getStart() !== $this->start + $this->getLength() ) {
-			throw new Exception( 'this ends at ' . ( $this->start + $this->getLength() ) .
+			throw new Exception( 'Concat: this ends at ' . ( $this->start + $this->getLength() ) .
 				' but other starts at ' . $otherChange->getStart() );
 		}
 
@@ -158,7 +158,7 @@ class Change implements \JsonSerializable {
 	 */
 	public function push( Change $other ) {
 		if ( $other->getStart() !== $this->start + $this->getLength() ) {
-			throw new Exception( 'this ends at ' . ( $this->start + $this->getLength() ) .
+			throw new Exception( 'Push: this ends at ' . ( $this->start + $this->getLength() ) .
 				' but other starts at ' . $other->getStart() );
 		}
 
@@ -238,7 +238,8 @@ class Change implements \JsonSerializable {
 				if ( !$lastInfo ) {
 					continue;
 				}
-				$insertion = str_split( $transaction );
+				$insertion = Transaction::split( $transaction );
+
 				$transaction = new Transaction( [
 					[ 'type' => 'retain', 'length' => $lastInfo['end'] ],
 					[ 'type' => 'replace', 'remove' => [], 'insert' => $insertion ],
