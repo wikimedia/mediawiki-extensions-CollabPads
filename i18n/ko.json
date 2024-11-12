@@ -21,5 +21,8 @@
 	"collabpads-invalid-change-dialog-delete-button": "삭제",
 	"collabpads-invalid-change-dialog-save-button": "저장",
 	"collabpads-session-ended-title": "세션이 종료되었습니다",
-	"collabpads-session-ended-message": "세션이 종료되었습니다."
+	"collabpads-session-ended-message": "세션이 종료되었습니다.",
+	"collabpads-copylink-label": "초대 링크 복사",
+	"collabpads-already-participating-message": "이미 이 문서를 편집하고 있습니다",
+	"collabpads-participants-label": "참가자"
 }

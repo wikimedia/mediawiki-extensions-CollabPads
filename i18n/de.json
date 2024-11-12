@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Hamish Slater",
+			"Osnard",
 			"Pavlo Yashchenko",
 			"[http://www.hallowelt.com Hallo Welt! GmbH]"
 		]
@@ -44,7 +45,7 @@
 	"collabpads-already-participating-message": "Du bearbeitest diese Seite bereits",
 	"collabpads-owner-label": "Besitzer",
 	"collabpads-participants-label": "Teilnehmer",
-	"collabpads-bs-saferedit-editing": "Diese Seite wird derzeit im Modus \"Gemeinsam bearbeiten\" bearbeitet. [$1 Sie können beitreten].",
+	"collabpads-bs-saferedit-editing": "Diese Seite wird derzeit im Modus \"Gemeinsam bearbeiten\" bearbeitet. $1",
 	"collabpads-normal-edit-blocked": "Normales Bearbeiten ist blockiert, wenn bereits eine kollaborative Sitzung auf der Seite läuft.",
 	"collabpads-save-complete-notif": "Seite gespeichert",
 	"collabpads-last-edit-info": "Zuletzt bearbeitet $1<br />von $2 und anderen",
@@ -57,5 +58,6 @@
 	"collabpads-session-ended-message": "Die Sitzung wurde beendet.",
 	"collabpads-dialog-cancel-button": "Abbrechen",
 	"collabpads-namespace-label": "Namensraum",
-	"collabpads-page-label": "Seite"
+	"collabpads-page-label": "Seite",
+	"collabpads-bs-saferedit-editing-link-text": "Du kannst beitreten"
 }
