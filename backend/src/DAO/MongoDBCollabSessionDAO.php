@@ -124,7 +124,7 @@ class MongoDBCollabSessionDAO extends MongoDBDAOBase implements ICollabSessionDA
 	 * @inheritDoc
 	 */
 	public function changeAuthorDataInSession(
-		int $sessionId, int $authorId, string $authorData, string $authorValue
+		int $sessionId, int $authorId, string $authorData, mixed $authorValue
 	) {
 		$this->collection->updateOne(
 			[ 's_id' => $sessionId, 's_authors.authorId' => $authorId ],
@@ -241,7 +241,7 @@ class MongoDBCollabSessionDAO extends MongoDBDAOBase implements ICollabSessionDA
 		if ( !$cb ) {
 			return null;
 		}
-		$cb = json_decode( $cb, true );
+		$cb = json_decode( json_encode( $cb ), true );
 		$stores = $cb['stores'] ?? [];
 		if ( is_array( $stores ) && isset( $stores['hashes'] ) ) {
 			// To be removed
