@@ -33,6 +33,55 @@ class Transaction implements \JsonSerializable {
 	}
 
 	/**
+	 * @param string $data
+	 * @return array
+	 */
+	public static function split( string $data ): array {
+		$bits = mb_str_split( $data );
+		$final = [];
+		foreach ( $bits as $bit ) {
+			if ( static::isEmoji( $bit ) ) {
+				$final[] = $bit;
+				// Pad for surrogate
+				$final[] = ' ';
+				continue;
+			}
+			$final[] = $bit;
+		}
+
+		return $final;
+	}
+
+	/**
+	 * @param string $char
+	 * @return bool
+	 */
+	private static function isEmoji( string $char ): bool {
+		// Convert the string to UTF-16
+		$utf16 = mb_convert_encoding( $char, 'UTF-16', 'UTF-8' );
+
+		// Unpack the UTF-16 string into an array of code units
+		$codeUnits = unpack( 'n*', $utf16 );
+
+		// Check if the string contains surrogate pairs
+		foreach ( $codeUnits as $codeUnit ) {
+			if ( $codeUnit >= 0xD800 && $codeUnit <= 0xDFFF ) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	 * @param Transaction $foreign
+	 * @return bool
+	 */
+	public function equals( Transaction $foreign ): bool {
+		return $this->author === $foreign->author && $this->operations === $foreign->operations;
+	}
+
+	/**
 	 * @return int
 	 */
 	public function getAuthor(): int {
@@ -82,7 +131,7 @@ class Transaction implements \JsonSerializable {
 			if ( $element === '' ) {
 				return [];
 			}
-			return str_split( $element );
+			return static::split( $element );
 		}
 		return $element;
 	}
