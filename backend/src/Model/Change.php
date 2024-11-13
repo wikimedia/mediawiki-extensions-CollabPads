@@ -79,7 +79,10 @@ class Change implements \JsonSerializable {
 	 * @return Transaction[]
 	 */
 	public function getTransactions(): array {
-		return $this->transactions;
+		// Return clones to prevent modifications
+		return array_map( static function ( Transaction $transaction ) {
+			return new Transaction( $transaction->getOperations(), $transaction->getAuthor() );
+		}, $this->transactions );
 	}
 
 	/**
@@ -135,7 +138,7 @@ class Change implements \JsonSerializable {
 
 		return new Change(
 			$this->start,
-			array_merge( $this->transactions, $otherChange->getTransactions() ),
+			array_merge( $this->getTransactions(), $otherChange->getTransactions() ),
 			$otherChange->getSelections(),
 			array_merge( $this->getStores(), $otherChange->getStores() )
 		);

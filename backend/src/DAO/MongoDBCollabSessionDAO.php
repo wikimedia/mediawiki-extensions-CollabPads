@@ -329,8 +329,7 @@ class MongoDBCollabSessionDAO extends MongoDBDAOBase implements ICollabSessionDA
 		$stores = $this->getFullStoresFromSession( $sessionId );
 		// Maybe we should store selections
 		$selections = [];
-		$sessionChange = new Change( 0, $transactions, $selections, $stores );
-		return $sessionChange;
+		return new Change( 0, $transactions, $selections, $stores );
 	}
 
 	/**
