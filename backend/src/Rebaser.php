@@ -28,9 +28,6 @@ class Rebaser implements LoggerAwareInterface {
 	 */
 	private $session;
 
-	/** @var Change|null */
-	private $sessionChange = null;
-
 	/**
 	 * @param MongoDBCollabSessionDAO $session
 	 */
@@ -56,7 +53,6 @@ class Rebaser implements LoggerAwareInterface {
 	 * @throws Exception
 	 */
 	public function applyChange( int $sessionId, Author $author, int $backtrack, Change $change ): Change {
-		$this->sessionChange = null;
 		$this->logger->info( "Rebasing change", [
 			'author' => json_encode( $author ),
 			'change' => json_encode( $change ),
@@ -93,21 +89,14 @@ class Rebaser implements LoggerAwareInterface {
 				// exiguitas non caperet).
 				$base = $base->mostRecent( $change->getStart() );
 			}
-			$this->sessionChange = $this->session->getChange( $sessionId );
-			$base = $base->concat( $this->sessionChange->mostRecent( $base->getStart() + $base->getLength() ) );
+			$sessionChange = $this->session->getChange( $sessionId );
+			$base = $base->concat( $sessionChange->mostRecent( $base->getStart() + $base->getLength() ) );
 			$result = $this->rebaseUncommittedChange( $base, $change );
 			$rejections = $result['rejected'] ? $result['rejected']->getLength() : 0;
-			$sessionChange = $this->getSessionChange();
-			if ( $sessionChange instanceof Change ) {
-				if ( !$result['rebased']->isEmpty() ) {
-					// Update session with newly applied change
-					$sessionChange->push( $result['rebased'] );
-					$this->session->replaceHistory( $sessionId, $sessionChange );
-				}
-			} else {
-				// Prevent broken session: if change is rebased, and will be emitted,
-				// session change MUST also be updated
-				throw new Exception( 'Change rebased, but no session change retrieved' );
+			if ( !$result['rebased']->isEmpty() ) {
+				// Update session with newly applied change
+				$sessionChange->push( $result['rebased'] );
+				$this->session->replaceHistory( $sessionId, $sessionChange );
 			}
 			$this->session->changeAuthorDataInSession(
 				$sessionId,
@@ -133,13 +122,6 @@ class Rebaser implements LoggerAwareInterface {
 			'rejections' => $rejections
 		] );
 		return $appliedChange;
-	}
-
-	/**
-	 * @return Change|null
-	 */
-	public function getSessionChange(): ?Change {
-		return $this->sessionChange;
 	}
 
 	/**
@@ -255,29 +237,6 @@ class Rebaser implements LoggerAwareInterface {
 			'rebased' => $rebased,
 			'transposedHistory' => $transposedHistory
 		];
-	}
-
-	/**
-	 * If we have same transactions in a and b, we can filter them out
-	 * @param array $a
-	 * @param array $b
-	 * @return array
-	 */
-	private function filterOutDuplicates( array $a, array $b ): array {
-		$actual = [];
-		foreach ( $a as $aItem ) {
-			$found = false;
-			foreach ( $b as $bItem ) {
-				if ( $aItem->equals( $bItem ) ) {
-					$found = true;
-					break;
-				}
-			}
-			if ( !$found ) {
-				$actual[] = $aItem;
-			}
-		}
-		return $actual;
 	}
 
 	/**
