@@ -16,6 +16,8 @@
 	"collabpads-copylink-label": "초대 링크 복사",
 	"collabpads-leave-tooltip": "떠나기",
 	"collabpads-clipboard-copy-fail": "URL을 클립보드에 복사하는데 실패했습니다",
+	"collabpads-author-join": "$1{{GENDER:$2| 님이 참여했습니다}}",
+	"collabpads-author-leave": "$1{{GENDER:$2|님이 나갔습니다}}",
 	"collabpads-already-participating-message": "이미 이 문서를 편집하고 있습니다",
 	"collabpads-namespace-label": "이름공간",
 	"collabpads-owner-label": "소유자",
