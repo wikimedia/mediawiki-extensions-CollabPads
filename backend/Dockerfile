@@ -8,6 +8,7 @@ RUN cd /usr/src/CollabpadsBackend/ && composer update --no-dev --ignore-platform
 FROM php:8.3-cli
 RUN pecl install mongodb-1.20.0 && docker-php-ext-enable mongodb
 RUN mkdir -p /usr/src/CollabpadsBackend
+RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 COPY --from=builder /usr/src/CollabpadsBackend/ /usr/src/CollabpadsBackend/
 WORKDIR /usr/src/CollabpadsBackend
 # ps is required for the init.sh script
