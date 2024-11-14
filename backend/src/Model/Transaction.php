@@ -270,6 +270,26 @@ class Transaction implements \JsonSerializable {
 			if ( $allSingle ) {
 				return implode( '', $data );
 			}
+			// Handle special case => template with no params
+			// Due to the way PHP handles json encoding/decoding of empty arrays, it will
+			// produce an array, instead of {}
+			// in JSON output, this breaks Parsoid conversion
+			foreach ( $data as &$element ) {
+				if (
+					isset( $element['type'] ) && $element['type'] === 'mwTransclusionBlock' &&
+					isset( $element['attributes']['mw']['parts'] ) && is_array( $element['attributes']['mw']['parts'] )
+				) {
+					foreach ( $element['attributes']['mw']['parts'] as &$part ) {
+						if (
+							is_array( $part ) && isset( $part['template']['params'] ) &&
+							is_array( $part['template']['params'] ) && empty( $part['template']['params'] )
+						) {
+							$part['template']['params'] = new \stdClass();
+						}
+					}
+				}
+			}
+
 		}
 		return $data;
 	}
