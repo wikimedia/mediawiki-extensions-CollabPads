@@ -36,16 +36,16 @@
 	"collabpads-recentchangesflags-legend": "זוהי עריכה עם פנקס משותף",
 	"collabpads-clipboard-copy-success": "קישור ההזמנה הועתק ללוח",
 	"collabpads-clipboard-copy-fail": "העתקת ה־URL ללוח נכשלה",
-	"collabpads-author-join": "{{GENDER:$1|הצטרף|הצטרפה}}",
-	"collabpads-author-leave": "{{GENDER:$1|עזב|עזבה}}",
-	"collabpads-author-save": "{{GENDER:$1|שמר|שמרה}}",
+	"collabpads-author-join": "$1 {{GENDER:$2|הצטרף|הצטרפה}}",
+	"collabpads-author-leave": "$1 {{GENDER:$2|עזב|עזבה}}",
+	"collabpads-author-save": "$1 {{GENDER:$2|שמר|שמרה}}",
 	"collabpads-already-participating-title": "כבר הצטרף",
 	"collabpads-already-participating-message": "{{GENDER:|אתה כבר עורך|את כבר עורכת}} את הדף הזה",
 	"collabpads-namespace-label": "מרחב שם",
 	"collabpads-page-label": "דף",
 	"collabpads-owner-label": "בעלים",
 	"collabpads-participants-label": "משתתפים",
-	"collabpads-bs-saferedit-editing": "הדף הזה נערך עכשיו במצב \"עריכה משותפת\". [$1 באפשרותך להצטרף]",
+	"collabpads-bs-saferedit-editing": "הדף הזה נערך עכשיו במצב \"עריכה משותפת\". $1",
 	"collabpads-normal-edit-blocked": "עריכה רגילה חסומה אם כבר יש עכשיו פעולה עריכה משותפת בדף.",
 	"collabpads-save-complete-notif": "הדף נשמר",
 	"collabpads-last-edit-info": "נערך לאחרונה ב־$1<br />על־ידי $2 ואחרים",
@@ -55,5 +55,6 @@
 	"collabpads-invalid-change-dialog-delete-button": "מחיקה",
 	"collabpads-invalid-change-dialog-save-button": "שמירה",
 	"collabpads-session-ended-title": "הפעולה הסתיימה",
-	"collabpads-session-ended-message": "הפעולה הסתיימה."
+	"collabpads-session-ended-message": "הפעולה הסתיימה.",
+	"collabpads-bs-saferedit-editing-link-text": "באפשרותך להצטרף"
 }

@@ -21,5 +21,17 @@
 	"collabpads-invalid-change-dialog-delete-button": "삭제",
 	"collabpads-invalid-change-dialog-save-button": "저장",
 	"collabpads-session-ended-title": "세션이 종료되었습니다",
-	"collabpads-session-ended-message": "세션이 종료되었습니다."
+	"collabpads-session-ended-message": "세션이 종료되었습니다.",
+	"collabpadsessions-admin": "CollabPad 세션",
+	"action-collabpadsessions-admin": "모든 CollabPad 세션 관리",
+	"collabpads-content-action-text": "함께 편집",
+	"collabpads-leave-dialog-title": "떠나기 확인",
+	"collabpads-copylink-label": "초대 링크 복사",
+	"collabpads-recentchangesflags-title": "CollabPads 편집",
+	"collabpads-recentchangesflags-legend": "CollabPads 편집입니다",
+	"collabpads-author-join": "$1{{GENDER:$2| 님이 참여했습니다}}",
+	"collabpads-author-leave": "$1{{GENDER:$2|님이 나갔습니다}}",
+	"collabpads-already-participating-message": "이미 이 문서를 편집하고 있습니다",
+	"collabpads-page-label": "문서",
+	"collabpads-participants-label": "참가자"
 }
