@@ -46,6 +46,7 @@
 	"collabpads-owner-label": "בעלים",
 	"collabpads-participants-label": "משתתפים",
 	"collabpads-bs-saferedit-editing": "הדף הזה נערך עכשיו במצב \"עריכה משותפת\". $1",
+	"collabpads-bs-saferedit-editing-link-text": "באפשרותך להצטרף",
 	"collabpads-normal-edit-blocked": "עריכה רגילה חסומה אם כבר יש עכשיו פעולה עריכה משותפת בדף.",
 	"collabpads-save-complete-notif": "הדף נשמר",
 	"collabpads-last-edit-info": "נערך לאחרונה ב־$1<br />על־ידי $2 ואחרים",
@@ -55,6 +56,5 @@
 	"collabpads-invalid-change-dialog-delete-button": "מחיקה",
 	"collabpads-invalid-change-dialog-save-button": "שמירה",
 	"collabpads-session-ended-title": "הפעולה הסתיימה",
-	"collabpads-session-ended-message": "הפעולה הסתיימה.",
-	"collabpads-bs-saferedit-editing-link-text": "באפשרותך להצטרף"
+	"collabpads-session-ended-message": "הפעולה הסתיימה."
 }

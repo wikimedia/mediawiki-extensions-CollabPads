@@ -4,12 +4,8 @@
 			"Saraiki"
 		]
 	},
-	"collabpads-save-dialog-save-button": "تبدیلیاں محفوظ کرو",
-	"collabpads-page-label": "ورقہ",
-	"collabpads-owner-label": "مالک",
-	"collabpads-invalid-change-dialog-delete-button": "مٹاؤ",
-	"collabpads-invalid-change-dialog-save-button": "سانبھو",
 	"collabpads-start-label": "شروع",
+	"collabpads-save-dialog-save-button": "تبدیلیاں محفوظ کرو",
 	"collabpads-save-dialog-summary": "خلاصہ:",
 	"collabpads-save-dialog-watch-page": "ایں ورقے تے پارھا ݙیوو",
 	"collabpads-leave-dialog-leave-button": "چھٹی",
@@ -17,6 +13,10 @@
 	"collabpads-dialog-accept-button": "منظور",
 	"collabpads-leave-tooltip": "چھٹی",
 	"collabpads-namespace-label": "ناں جاہ",
+	"collabpads-page-label": "ورقہ",
+	"collabpads-owner-label": "مالک",
 	"collabpads-participants-label": "شرکاء",
+	"collabpads-invalid-change-dialog-delete-button": "مٹاؤ",
+	"collabpads-invalid-change-dialog-save-button": "سانبھو",
 	"collabpads-session-ended-title": "سیشن مُک ڳیا"
 }
