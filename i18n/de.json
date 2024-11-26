@@ -5,7 +5,8 @@
 			"Pavlo Yashchenko",
 			"[http://www.hallowelt.com Hallo Welt! GmbH]",
 			"Mukeber",
-			"Osnard"
+			"Osnard",
+			"Mschlindwein"
 		]
 	},
 	"collabpads-desc": "Erlaubt das kollaborative Bearbeiten von Wikiseiten",
@@ -59,6 +60,6 @@
 	"collabpads-invalid-change-dialog-message": "Fehler beim Anwenden der Änderung. Bitte speichern oder löschen Sie alle Änderungen.",
 	"collabpads-invalid-change-dialog-delete-button": "Löschen",
 	"collabpads-invalid-change-dialog-save-button": "Speichern",
-	"collabpads-session-ended-title": "Sitzung Beendet",
+	"collabpads-session-ended-title": "Sitzung beendet",
 	"collabpads-session-ended-message": "Die Sitzung wurde beendet."
 }
