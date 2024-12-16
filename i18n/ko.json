@@ -5,6 +5,7 @@
 		]
 	},
 	"collabpadsessions-admin": "CollabPad 세션",
+	"action-collabpadsessions-admin": "모든 CollabPad 세션 관리",
 	"collabpads-content-action-text": "함께 편집",
 	"collabpads-start-label": "시작",
 	"collabpads-start-dialog-show-again": "이 메시지를 더 이상 보지 않기",

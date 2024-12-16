@@ -1,14 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"SleaY",
-			"Mahabarata"
+			"Mahabarata",
+			"SleaY"
 		]
 	},
 	"collabpads-desc": "Permet l'édition collaborative des pages wiki",
 	"collabpadsessions": "Mes sessions CollabPad",
 	"collabpadsessions-admin": "Sessions CollabPad",
 	"right-collabpadsessions-admin": "Gérer toutes les sessions CollabPad",
+	"action-collabpadsessions-admin": "Gérer toutes les sessions CollabPad",
 	"collabpads-content-action-text": "Éditer ensemble",
 	"collabpads-content-action-tooltip": "Démarrez une session d'édition collaborative et invitez d'autres personnes à se joindre à vous",
 	"collabpads-start-dialog-title": "Bienvenue dans le mode « Éditer ensemble » !",

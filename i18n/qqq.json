@@ -10,6 +10,7 @@
 	"collabpadsessions": "Title for special page {{CollabPad Sessions}}",
 	"collabpadsessions-admin": "Title for special page {{My CollabPads Sessions}} for admins",
 	"right-collabpadsessions-admin": "{{doc-right|collabpadsessions-admin}}",
+	"action-collabpadsessions-admin": "{{doc-action|collabpadsessions-admin}}",
 	"collabpads-content-action-text": "Label for the \"Edit together\" edit action",
 	"collabpads-content-action-tooltip": "Tooltip for the Edit collaboratively action",
 	"collabpads-start-dialog-title": "Title for the start session dialog",

@@ -58,7 +58,7 @@
 		"MediaWiki\\Extension\\CollabPads\\": "src/"
 	},
 	"TestAutoloadNamespaces": {
-		"MediaWiki\\Extension\\CollabPads\\Tests": "tests/phpunit"
+		"MediaWiki\\Extension\\CollabPads\\Tests\\": "tests/phpunit"
 	},
 	"GroupPermissions": {
 		"*": {
@@ -68,6 +68,9 @@
 			"collabpadsessions-admin": true
 		}
 	},
+	"AvailableRights": [
+		"collabpadsessions-admin"
+	],
 	"RecentChangesFlags": {
 		"collab-edit": {
 			"letter": "collabpads-recentchangesflags-letter",
@@ -185,6 +188,9 @@
 			"i18n"
 		]
 	},
+	"ExtensionMessagesFiles": {
+		"CollabPadSessions": "languages/CollabPadSessions.alias.php"
+	},
 	"ResourceModules": {
 		"ext.collabPads": {
 			"scripts": [
@@ -271,10 +277,6 @@
 				"collabpads-invalid-change-dialog-message",
 				"collabpads-invalid-change-dialog-delete-button",
 				"collabpads-invalid-change-dialog-save-button"
-			],
-			"targets": [
-				"desktop",
-				"mobile"
 			]
 		},
 		"ext.CollabPads.collabTarget.desktop": {
@@ -284,20 +286,6 @@
 			"styles": [
 				"styles/ve/ve.init.mw.DesktopArticleTarget.css"
 			],
-			"skinStyles": {
-				"vector": [
-					"includes/ve/mw/ve-mw/init/styles/ve.init.mw.DesktopArticleTarget-vector.css"
-				],
-				"apex": [
-					"includes/ve/mw/ve-mw/init/styles/ve.init.mw.DesktopArticleTarget-apex.css"
-				],
-				"monobook": [
-					"includes/ve/mw/ve-mw/init/styles/ve.init.mw.DesktopArticleTarget-monobook.css"
-				],
-				"minerva": [
-					"includes/ve/mw/ve-mw/init/styles/ve.init.mw.DesktopArticleTarget-minerva.css"
-				]
-			},
 			"dependencies": [
 				"ext.CollabPads.collabTarget",
 				"ext.visualEditor.core.desktop",
@@ -305,9 +293,6 @@
 				"ext.visualEditor.desktopTarget"
 			],
 			"messages": [
-			],
-			"targets": [
-				"desktop"
 			]
 		},
 		"ext.CollabPads.collabTarget.init": {
@@ -351,10 +336,6 @@
 				"collabpads-out-of-sync",
 				"collabpads-session-ended-title",
 				"collabpads-session-ended-message"
-			],
-			"targets": [
-				"desktop",
-				"mobile"
 			]
 		},
 		"collabpads.grid": {
@@ -384,21 +365,6 @@
 			"dependencies": [
 				"collabpads.grid",
 				"mediawiki.api"
-			],
-			"messages": [
-				"bs-categorymanager-draganddrop-text",
-				"bs-categorymanager-dlg-new-prompt",
-				"bs-categorymanager-dlg-new-title",
-				"bs-categorymanager-removecategoryconfirm-text",
-				"bs-categorymanager-removecategoryconfirm-title",
-				"bs-categorymanager-addcategory-dialog-error-title",
-				"bs-categorymanager-addcategory-dialog-error-duplicate-title",
-				"bs-categorymanager-addcategory-dialog-error-duplicate-text",
-				"bs-categorymanager-action-show-category",
-				"bs-categorymanager-rename-category",
-				"bs-categorymanager-rename-category-new-name",
-				"bs-categorymanager-move-new-name",
-				"bs-categorymanager-replace-in-pages"
 			]
 		},
 		"ext.collabpads.api": {
@@ -409,10 +375,6 @@
 		"bs.socket.io": {
 			"scripts": [
 				"socket.io/socket.io.min.js"
-			],
-			"targets": [
-				"desktop",
-				"mobile"
 			]
 		},
 		"collabpad.ui.participants.styles": {
