@@ -2,6 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Hamish Slater",
+			"Mschlindwein",
+			"Mukeber",
 			"Osnard",
 			"Pavlo Yashchenko",
 			"[http://www.hallowelt.com Hallo Welt! GmbH]"
@@ -30,6 +32,7 @@
 	"collabpads-reset-changes-dialog-message": "Sind Sie sicher, dass Sie die letzte gespeicherte Version wiederherstellen wollen?",
 	"collabpads-reset-changes-dialog-reset-changes-button": "Zurücksetzen",
 	"collabpads-reset-changes-tooltip": "Änderungen auf die zuletzt gespeicherte Version zurücksetzen",
+	"collabpads-dialog-cancel-button": "Abbrechen",
 	"collabpads-dialog-accept-button": "Akzeptieren",
 	"collabpads-copylink-label": "Einladungslink kopieren",
 	"collabpads-leave-tooltip": "Sitzung verlassen",
@@ -43,9 +46,12 @@
 	"collabpads-author-save": "$1 {{GENDER:$2|hat gepeichert}}",
 	"collabpads-already-participating-title": "Bereits beigetreten",
 	"collabpads-already-participating-message": "Du bearbeitest diese Seite bereits",
+	"collabpads-namespace-label": "Namensraum",
+	"collabpads-page-label": "Seite",
 	"collabpads-owner-label": "Besitzer",
 	"collabpads-participants-label": "Teilnehmer",
 	"collabpads-bs-saferedit-editing": "Diese Seite wird derzeit im Modus \"Gemeinsam bearbeiten\" bearbeitet. $1",
+	"collabpads-bs-saferedit-editing-link-text": "Du kannst beitreten",
 	"collabpads-normal-edit-blocked": "Normales Bearbeiten ist blockiert, wenn bereits eine kollaborative Sitzung auf der Seite läuft.",
 	"collabpads-save-complete-notif": "Seite gespeichert",
 	"collabpads-last-edit-info": "Zuletzt bearbeitet $1<br />von $2 und anderen",
@@ -54,10 +60,6 @@
 	"collabpads-invalid-change-dialog-message": "Fehler beim Anwenden der Änderung. Bitte speichern oder löschen Sie alle Änderungen.",
 	"collabpads-invalid-change-dialog-delete-button": "Löschen",
 	"collabpads-invalid-change-dialog-save-button": "Speichern",
-	"collabpads-session-ended-title": "Sitzung Beendet",
-	"collabpads-session-ended-message": "Die Sitzung wurde beendet.",
-	"collabpads-dialog-cancel-button": "Abbrechen",
-	"collabpads-namespace-label": "Namensraum",
-	"collabpads-page-label": "Seite",
-	"collabpads-bs-saferedit-editing-link-text": "Du kannst beitreten"
+	"collabpads-session-ended-title": "Sitzung beendet",
+	"collabpads-session-ended-message": "Die Sitzung wurde beendet."
 }

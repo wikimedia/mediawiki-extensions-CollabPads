@@ -14,12 +14,12 @@
 	"collabpads-dialog-cancel-button": "Откажи",
 	"collabpads-dialog-accept-button": "Прихватам",
 	"collabpads-leave-tooltip": "Напусти",
+	"collabpads-author-join": "$1 се {{GENDER:$2|придружио|придружила}}",
 	"collabpads-author-leave": "$1 је {{GENDER:$2|отишао|отишла}}",
 	"collabpads-author-save": "$1 је {{GENDER:$2|сачувао|сачувала}}",
 	"collabpads-namespace-label": "Именски простор",
 	"collabpads-owner-label": "Власник",
 	"collabpads-save-complete-notif": "Страница сачувана",
 	"collabpads-invalid-change-dialog-delete-button": "Обриши",
-	"collabpads-invalid-change-dialog-save-button": "Сачувај",
-	"collabpads-author-join": "$1 се {{GENDER:$2|придружио|придружила}}"
+	"collabpads-invalid-change-dialog-save-button": "Сачувај"
 }

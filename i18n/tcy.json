@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"ChiK",
 			"Vinoda mamatharai"
 		]
 	},
@@ -8,12 +9,12 @@
 	"collabpads-toolbar-save-button": "ಬದಲಾವನೆನ್ ಒರಿಪಾಲೆ...",
 	"collabpads-save-dialog-title": "ಈರೆನ ಬದಲಾವಣೆಲೆನ್ ಒರಿಪ್ಪಾಲೆ",
 	"collabpads-save-dialog-save-button": "ಬದಲಾವನೆನ್ ಒರಿಪಾಲೆ",
-	"collabpads-save-dialog-summary": "ಸಾರಾಂಶೊ",
+	"collabpads-save-dialog-summary": "ಸಾರಾಂಸೊ:",
 	"collabpads-save-dialog-minor-edit": "ಉಂದು ಎಲ್ಯ ಬದಲಾವಣೆ",
 	"collabpads-save-dialog-watch-page": "ಈ ಪುಟೊನು ತೂಲೆ",
 	"collabpads-dialog-accept-button": "ಸ್ವೀಕಾರ",
-	"collabpads-already-participating-title": "ಸೇರ್ದಿತ್ತಿನ",
-	"collabpads-page-label": "ಪುಟ",
+	"collabpads-already-participating-title": "ದುಂಬೇ ಸೇರ್ದೆರ್",
+	"collabpads-page-label": "ಪುಟೊ",
 	"collabpads-participants-label": "ಪಾಲ್ ದೆತೊನುನಕುಲು",
 	"collabpads-save-complete-notif": "ಒರಿಪಾಯಿನ ಪುಟ",
 	"collabpads-invalid-change-dialog-delete-button": "ಮಾಜಾಲೆ",
