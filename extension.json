@@ -213,6 +213,7 @@
 				"collabpads-start-dialog-message",
 				"collabpads-dialog-cancel-button",
 				"collabpads-start-label",
+				"collabpads-toolbar-save-button-label",
 				"collabpads-toolbar-save-button",
 				"collabpads-dialog-accept-button",
 				"collabpads-start-dialog-show-again",
@@ -249,7 +250,7 @@
 				"bs.socket.io"
 			],
 			"messages": [
-				"collabpads-save-dialog-save-button",
+				"collabpads-save-dialog-save-button-label",
 				"collabpads-copylink-label",
 				"collabpads-participants-label",
 				"collabpads-leave-tooltip",
