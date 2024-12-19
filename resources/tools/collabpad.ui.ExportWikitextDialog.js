@@ -31,7 +31,7 @@ collabpad.ui.ExportWikitextDialog.static.actions = [
 		flags: [ 'safe' ]
 	},
 	{
-		label: mw.msg( 'collabpads-save-dialog-save-button' ),
+		label: mw.msg( 'collabpads-save-dialog-save-button-label' ),
 		action: 'save-session',
 		flags: [ 'primary', 'progressive' ]
 	}
