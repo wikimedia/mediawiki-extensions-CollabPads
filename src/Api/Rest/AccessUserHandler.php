@@ -115,7 +115,7 @@ class AccessUserHandler extends SimpleHandler {
 		return $this->getResponseFactory()->createJson( [
 			'access' => true,
 			'user' => $userData,
-			'pageTitle' => $pageTitle->mUrlform,
+			'pageTitle' => $pageTitle->getPartialURL(),
 			'pageNamespace' => $pageTitle->getNamespace(),
 			'message' => 'Access granted!',
 			'error' => null
