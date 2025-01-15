@@ -56,5 +56,7 @@
 	"collabpads-invalid-change-dialog-delete-button": "Избриши",
 	"collabpads-invalid-change-dialog-save-button": "Зачувај",
 	"collabpads-session-ended-title": "Седницата заврши",
-	"collabpads-session-ended-message": "Седницата е завршена."
+	"collabpads-session-ended-message": "Седницата е завршена.",
+	"collabpads-toolbar-save-button-label": "Зачувај",
+	"collabpads-save-dialog-save-button-label": "Зачувај"
 }

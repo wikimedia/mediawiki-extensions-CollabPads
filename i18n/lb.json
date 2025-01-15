@@ -56,5 +56,7 @@
 	"collabpads-invalid-change-dialog-delete-button": "Läschen",
 	"collabpads-invalid-change-dialog-save-button": "Späicheren",
 	"collabpads-session-ended-title": "Sitzung eriwwer",
-	"collabpads-session-ended-message": "Dës Sitzung ass eriwwer."
+	"collabpads-session-ended-message": "Dës Sitzung ass eriwwer.",
+	"collabpads-toolbar-save-button-label": "Späicheren",
+	"collabpads-save-dialog-save-button-label": "Späicheren"
 }

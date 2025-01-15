@@ -21,5 +21,7 @@
 	"collabpads-owner-label": "Власник",
 	"collabpads-save-complete-notif": "Страница сачувана",
 	"collabpads-invalid-change-dialog-delete-button": "Обриши",
-	"collabpads-invalid-change-dialog-save-button": "Сачувај"
+	"collabpads-invalid-change-dialog-save-button": "Сачувај",
+	"collabpads-toolbar-save-button-label": "Сачувај",
+	"collabpads-save-dialog-save-button-label": "Сачувај"
 }

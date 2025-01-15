@@ -7,5 +7,7 @@
 	"collabpads-save-dialog-summary": "Čuákánkiäsu:",
 	"collabpads-save-dialog-watch-page": "Tarkkuu taam siijđo",
 	"collabpads-dialog-cancel-button": "Jooskâ",
-	"collabpads-invalid-change-dialog-save-button": "Vuorkkii"
+	"collabpads-invalid-change-dialog-save-button": "Vuorkkii",
+	"collabpads-toolbar-save-button-label": "Vuorkkii",
+	"collabpads-save-dialog-save-button-label": "Vuorkkii"
 }

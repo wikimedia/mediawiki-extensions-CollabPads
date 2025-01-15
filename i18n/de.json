@@ -61,5 +61,6 @@
 	"collabpads-invalid-change-dialog-delete-button": "Löschen",
 	"collabpads-invalid-change-dialog-save-button": "Speichern",
 	"collabpads-session-ended-title": "Sitzung beendet",
-	"collabpads-session-ended-message": "Die Sitzung wurde beendet."
+	"collabpads-session-ended-message": "Die Sitzung wurde beendet.",
+	"collabpads-toolbar-save-button-label": "Speichern"
 }

@@ -59,5 +59,7 @@
 	"collabpads-invalid-change-dialog-delete-button": "Delete",
 	"collabpads-invalid-change-dialog-save-button": "Save",
 	"collabpads-session-ended-title": "Session ended",
-	"collabpads-session-ended-message": "The session has been ended."
+	"collabpads-session-ended-message": "The session has been ended.",
+	"collabpads-toolbar-save-button-label": "Save",
+	"collabpads-save-dialog-save-button-label": "Save"
 }

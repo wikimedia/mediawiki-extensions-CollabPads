@@ -59,5 +59,7 @@
 	"collabpads-invalid-change-dialog-delete-button": "Label for delete button",
 	"collabpads-invalid-change-dialog-save-button": "Label for save button",
 	"collabpads-session-ended-title": "Title of the session ended dialog",
-	"collabpads-session-ended-message": "Message in the session ended dialog"
+	"collabpads-session-ended-message": "Message in the session ended dialog",
+	"collabpads-toolbar-save-button-label": "Label for the save button in toolbar\n{{Identical|Save}}",
+	"collabpads-save-dialog-save-button-label": "Label for save button in save dialog\n{{Identical|Save}}"
 }
