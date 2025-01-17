@@ -6,7 +6,7 @@ use Html;
 use MediaWiki\Extension\CollabPads\CollabRevisionManager;
 use MediaWiki\Hook\EnhancedChangesListModifyBlockLineDataHook;
 use MediaWiki\Linker\LinkRenderer;
-use Title;
+use MediaWiki\Title\Title;
 
 class IntegrateIntoNonGroupedRecentChanges implements EnhancedChangesListModifyBlockLineDataHook {
 
