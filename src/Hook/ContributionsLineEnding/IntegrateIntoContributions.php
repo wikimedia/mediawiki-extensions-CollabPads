@@ -9,8 +9,8 @@ use MediaWiki\Extension\CollabPads\CollabRevisionManager;
 use MediaWiki\Hook\ContribsPager__getQueryInfoHook;
 use MediaWiki\Hook\SpecialContributions__formatRow__flagsHook;
 use MediaWiki\Linker\LinkRenderer;
+use MediaWiki\Title\Title;
 use MediaWiki\User\UserFactory;
-use Title;
 
 class IntegrateIntoContributions
 	implements ContribsPager__getQueryInfoHook, SpecialContributions__formatRow__flagsHook {

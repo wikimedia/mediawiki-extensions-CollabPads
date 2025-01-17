@@ -6,8 +6,8 @@ use BlueSpice\Discovery\Hook\BlueSpiceDiscoveryTemplateDataProviderAfterInit;
 use BlueSpice\Discovery\ITemplateDataProvider;
 use MediaWiki\Extension\CollabPads\CollabSessionManager;
 use MediaWiki\HookContainer\HookContainer;
+use MediaWiki\Title\Title;
 use RequestContext;
-use Title;
 
 class DiscoverySkin implements BlueSpiceDiscoveryTemplateDataProviderAfterInit {
 

@@ -4,8 +4,8 @@ namespace MediaWiki\Extension\CollabPads\HookHandler;
 
 use BlueSpice\SaferEdit\Hook\BSSaferEditMessage;
 use Html;
+use MediaWiki\Title\Title;
 use RequestContext;
-use Title;
 use Wikimedia\Rdbms\LoadBalancer;
 
 class SaferEditMessage implements BSSaferEditMessage {
