@@ -7,11 +7,11 @@ use MediaWiki\Hook\MediaWikiPerformActionHook;
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use Message;
 use NamespaceInfo;
 use OutputPage;
 use PermissionsError;
-use User;
 use WebRequest;
 use Wikimedia\Rdbms\LoadBalancer;
 
