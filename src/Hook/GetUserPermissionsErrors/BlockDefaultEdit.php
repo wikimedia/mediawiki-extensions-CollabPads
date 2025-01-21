@@ -2,10 +2,10 @@
 
 namespace MediaWiki\Extension\CollabPads\Hook\GetUserPermissionsErrors;
 
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\CollabPads\CollabSessionManager;
 use MediaWiki\Permissions\Hook\GetUserPermissionsErrorsHook;
 use Message;
-use RequestContext;
 
 class BlockDefaultEdit implements GetUserPermissionsErrorsHook {
 

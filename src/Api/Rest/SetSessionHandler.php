@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\CollabPads\Api\Rest;
 
-use RequestContext;
+use MediaWiki\Context\RequestContext;
 
 class SetSessionHandler extends CollabSessionHandlerBase {
 
