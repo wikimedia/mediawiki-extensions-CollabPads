@@ -6,13 +6,13 @@ use MediaWiki\Extension\CollabPads\CollabPadAccessTokenDAO;
 use MediaWiki\Hook\MediaWikiPerformActionHook;
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\Request\WebRequest;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
 use Message;
 use NamespaceInfo;
 use OutputPage;
 use PermissionsError;
-use WebRequest;
 use Wikimedia\Rdbms\LoadBalancer;
 
 class CollabEditActionHookHandler implements
