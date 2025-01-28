@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\CollabPads\Special;
 
-use Html;
+use MediaWiki\Html\Html;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\SpecialPage\SpecialPage;
 

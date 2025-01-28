@@ -2,9 +2,9 @@
 
 namespace MediaWiki\Extension\CollabPads\Hook\EnhancedChangesListModifyLineData;
 
-use Html;
 use MediaWiki\Extension\CollabPads\CollabRevisionManager;
 use MediaWiki\Hook\EnhancedChangesListModifyLineDataHook;
+use MediaWiki\Html\Html;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Title\Title;
 

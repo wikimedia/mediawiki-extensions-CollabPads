@@ -2,9 +2,9 @@
 
 namespace MediaWiki\Extension\CollabPads\Hook\PageHistoryLineEnding;
 
-use Html;
 use MediaWiki\Extension\CollabPads\CollabRevisionManager;
 use MediaWiki\Hook\PageHistoryLineEndingHook;
+use MediaWiki\Html\Html;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Title\Title;
 
