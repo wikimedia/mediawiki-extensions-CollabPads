@@ -3,8 +3,8 @@
 namespace MediaWiki\Extension\CollabPads\HookHandler;
 
 use BlueSpice\SaferEdit\Hook\BSSaferEditMessage;
-use Html;
 use MediaWiki\Context\RequestContext;
+use MediaWiki\Html\Html;
 use MediaWiki\Title\Title;
 use Wikimedia\Rdbms\LoadBalancer;
 

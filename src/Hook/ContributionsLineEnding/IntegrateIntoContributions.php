@@ -4,10 +4,10 @@ namespace MediaWiki\Extension\CollabPads\Hook\ContributionsLineEnding;
 
 use ChangesList;
 use ContribsPager;
-use Html;
 use MediaWiki\Extension\CollabPads\CollabRevisionManager;
 use MediaWiki\Hook\ContribsPager__getQueryInfoHook;
 use MediaWiki\Hook\SpecialContributions__formatRow__flagsHook;
+use MediaWiki\Html\Html;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Title\Title;
 use MediaWiki\User\UserFactory;
