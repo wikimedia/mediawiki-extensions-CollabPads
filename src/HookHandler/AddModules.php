@@ -3,7 +3,7 @@
 namespace MediaWiki\Extension\CollabPads\HookHandler;
 
 use MediaWiki\Hook\BeforePageDisplayHook;
-use OutputPage;
+use MediaWiki\Output\OutputPage;
 use Skin;
 
 class AddModules implements BeforePageDisplayHook {
