@@ -6,12 +6,12 @@ use MediaWiki\Extension\CollabPads\CollabPadAccessTokenDAO;
 use MediaWiki\Hook\MediaWikiPerformActionHook;
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\Message\Message;
+use MediaWiki\Output\OutputPage;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
 use NamespaceInfo;
-use OutputPage;
 use PermissionsError;
 use Wikimedia\Rdbms\LoadBalancer;
 
