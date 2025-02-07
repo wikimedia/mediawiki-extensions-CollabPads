@@ -91,6 +91,8 @@ collabpad.ui.ExportWikitextDialog.prototype.getActionProcess = function ( action
 		if ( action === 'save-session' ) {
 			try {
 				await this.export();
+				this.popPending();
+				this.close();
 			} catch ( error ) {
 				console.error( 'CollabPads error: ' + error ); // eslint-disable-line no-console
 				this.popPending();
@@ -161,7 +163,6 @@ collabpad.ui.ExportWikitextDialog.prototype.export = async function () {
 	if ( numberOfAuthors === 1 || this.forceDeleteSession ) {
 		this.deleteSessionRedirect( fullPageName, 1000 );
 	}
-	this.close();
 };
 
 /**
