@@ -9,9 +9,9 @@ use MediaWiki\Message\Message;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Request\WebRequest;
+use MediaWiki\Title\NamespaceInfo;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
-use NamespaceInfo;
 use PermissionsError;
 use Wikimedia\Rdbms\LoadBalancer;
 
