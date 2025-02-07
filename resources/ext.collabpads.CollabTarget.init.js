@@ -1,6 +1,21 @@
 /* eslint-disable no-jquery/no-global-selector */
+
 ( async function ( mw, $ ) {
 	$( '#mw-content-text' ).empty();
+
+	const selectFirstContentOffset = function ( surface ) {
+		var firstOffset = surface.getDocument().data.getNearestContentOffset(
+			surface.getAttachedRoot().getOffset(),
+			1
+		);
+		if ( firstOffset !== -1 ) {
+			// Found a content offset
+			surface.setLinearSelection( new ve.Range( firstOffset ) );
+		} else {
+			// Document is full of structural nodes, just give up
+			surface.setNullSelection();
+		}
+	};
 
 	try {
 		const conf = mw.config.get( 'wgVisualEditorConfig' );
@@ -76,7 +91,7 @@
 				try {
 					target.once( 'surfaceReady', async () => {
 						await handleInitialisation( target, surfaceModel, pageExists, importTitle );
-						surfaceModel.selectFirstContentOffset();
+						selectFirstContentOffset( surfaceModel );
 					} );
 				} catch ( err ) {
 					throw new Error( err );
