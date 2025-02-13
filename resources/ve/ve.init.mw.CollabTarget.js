@@ -163,7 +163,7 @@ ve.ui.MWExportTool.static.disabled = true;
 ve.ui.MWExportTool.static.autoAddToCatchall = false;
 ve.ui.MWExportTool.static.flags = [ 'progressive', 'primary' ];
 ve.ui.MWExportTool.static.title =
-	OO.ui.deferMsg( 'collabpads-toolbar-save-button' );
+	OO.ui.deferMsg( 'collabpads-toolbar-save-button-label' );
 ve.ui.MWExportTool.static.label = 'collabpads-toolbar-save-button-label';
 ve.ui.MWExportTool.static.commandName = 'mwExportWikitext';
 ve.ui.toolFactory.register( ve.ui.MWExportTool );
