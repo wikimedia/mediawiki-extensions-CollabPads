@@ -40,5 +40,20 @@
 	"collabpads-author-join": "$1 {{GENDER:$2|ha entrate}}",
 	"collabpads-author-leave": "$1 {{GENDER:$2|ha partite}}",
 	"collabpads-author-save": "$1 {{GENDER:$2|ha salveguardate}}",
-	"collabpads-already-participating-title": "Ja presente"
+	"collabpads-already-participating-title": "Ja presente",
+	"collabpads-already-participating-message": "Tu modifica ja iste pagina",
+	"collabpads-namespace-label": "Spatio de nomines",
+	"collabpads-page-label": "Pagina",
+	"collabpads-owner-label": "Proprietario",
+	"collabpads-participants-label": "Participantes",
+	"collabpads-bs-saferedit-editing": "Iste pagina es actualmente in modification in modo “Modificar insimul”. $1",
+	"collabpads-bs-saferedit-editing-link-text": "Tu pote participar",
+	"collabpads-normal-edit-blocked": "Le modification normal es blocate si un session collaborative es ja in curso sur le pagina.",
+	"collabpads-save-complete-notif": "Pagina salveguardate",
+	"collabpads-last-edit-info": "Ultime modification le $1<br />per $2 e alteres",
+	"collabpads-out-of-sync": "Tu cliente non es synchronisate con le servitor. Le pagina va recargar se pro restabilir le connexion.",
+	"collabpads-invalid-change-dialog-title": "Cambiamento invalide",
+	"collabpads-invalid-change-dialog-message": "Error applicante le cambiamento. Per favor salveguarda o dele tote le cambiamentos.",
+	"collabpads-invalid-change-dialog-delete-button": "Deler",
+	"collabpads-invalid-change-dialog-save-button": "Salveguardar"
 }
