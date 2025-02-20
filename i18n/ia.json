@@ -55,5 +55,7 @@
 	"collabpads-invalid-change-dialog-title": "Cambiamento invalide",
 	"collabpads-invalid-change-dialog-message": "Error applicante le cambiamento. Per favor salveguarda o dele tote le cambiamentos.",
 	"collabpads-invalid-change-dialog-delete-button": "Deler",
-	"collabpads-invalid-change-dialog-save-button": "Salveguardar"
+	"collabpads-invalid-change-dialog-save-button": "Salveguardar",
+	"collabpads-session-ended-title": "Session terminate",
+	"collabpads-session-ended-message": "Le session ha terminate."
 }
