@@ -582,11 +582,18 @@ ve.dm.SurfaceSynchronizer.prototype.clearAuthorsSinceLastChange = function () {
 };
 
 ve.dm.SurfaceSynchronizer.prototype.invalidChange = function () {
+	this.openDialog( new collabpad.ui.InvalidChangeDialog( this.surface ) );
+};
+
+ve.dm.SurfaceSynchronizer.prototype.initFailed = function () {
+	this.openDialog( new collabpad.ui.InvalidInitializationDialog( this.surface ) );
+};
+
+ve.dm.SurfaceSynchronizer.prototype.openDialog = function ( dialog ) {
 	const windowManager = new OO.ui.WindowManager();
 	$( document.body ).append( windowManager.$element );
-	const invalidChangeDialog = new collabpad.ui.InvalidChangeDialog( this.surface );
-	windowManager.addWindows( [ invalidChangeDialog ] );
-	windowManager.openWindow( invalidChangeDialog );
+	windowManager.addWindows( [ dialog ] );
+	windowManager.openWindow( dialog );
 };
 
 ve.dm.SurfaceSynchronizer.prototype.onDeleteSession = function () {
