@@ -61,5 +61,7 @@
 	"collabpads-session-ended-title": "Title of the session ended dialog",
 	"collabpads-session-ended-message": "Message in the session ended dialog",
 	"collabpads-toolbar-save-button-label": "Label for the save button in toolbar\n{{Identical|Save}}",
-	"collabpads-save-dialog-save-button-label": "Label for save button in save dialog\n{{Identical|Save}}"
+	"collabpads-save-dialog-save-button-label": "Label for save button in save dialog\n{{Identical|Save}}",
+	"collabpads-invalid-initialization-dialog-title": "Title of the invalid initialization dialog",
+	"collabpads-invalid-initialization-dialog-message": "Message in the invalid initialization dialog"
 }
