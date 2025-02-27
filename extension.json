@@ -235,7 +235,8 @@
 				"tools/collabpad.ui.ExportWikitextDialog.js",
 				"tools/ve.ui.CollabAuthorListPopupTool.js",
 				"tools/collabpad.ui.CollabAuthorItemWidget.js",
-				"tools/collabpad.ui.InvalidChangeDialog.js"
+				"tools/collabpad.ui.InvalidChangeDialog.js",
+				"tools/collabpad.ui.InvalidInitializationDialog.js"
 			],
 			"styles": [
 				"styles/dialogWidows.css",
@@ -277,7 +278,9 @@
 				"collabpads-invalid-change-dialog-title",
 				"collabpads-invalid-change-dialog-message",
 				"collabpads-invalid-change-dialog-delete-button",
-				"collabpads-invalid-change-dialog-save-button"
+				"collabpads-invalid-change-dialog-save-button",
+				"collabpads-invalid-initialization-dialog-title",
+				"collabpads-invalid-initialization-dialog-message"
 			]
 		},
 		"ext.CollabPads.collabTarget.desktop": {
