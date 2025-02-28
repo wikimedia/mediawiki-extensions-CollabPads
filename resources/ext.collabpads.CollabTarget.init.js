@@ -90,8 +90,12 @@
 
 				try {
 					target.once( 'surfaceReady', async () => {
-						await handleInitialisation( target, surfaceModel, pageExists, importTitle );
-						selectFirstContentOffset( surfaceModel );
+						try {
+							await handleInitialisation( target, surfaceModel, pageExists, importTitle );
+							selectFirstContentOffset( surfaceModel );
+						} catch ( e ) {
+							surfaceModel.synchronizer.initFailed();
+						}
 					} );
 				} catch ( err ) {
 					throw new Error( err );
