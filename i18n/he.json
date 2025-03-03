@@ -57,5 +57,7 @@
 	"collabpads-invalid-change-dialog-delete-button": "מחיקה",
 	"collabpads-invalid-change-dialog-save-button": "שמירה",
 	"collabpads-session-ended-title": "הפעולה הסתיימה",
-	"collabpads-session-ended-message": "הפעולה הסתיימה."
+	"collabpads-session-ended-message": "הפעולה הסתיימה.",
+	"collabpads-invalid-initialization-dialog-title": "האתחול נכשל",
+	"collabpads-invalid-initialization-dialog-message": "הדף הזה מכיל תוכן שלא ניתן לערוך באמצעות העורך המשותף. נא למחוק את האירוע"
 }
