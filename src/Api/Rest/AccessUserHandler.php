@@ -111,6 +111,7 @@ class AccessUserHandler extends SimpleHandler {
 	 */
 	private function grantedAccessResponse( User $user, Title $pageTitle ): Response {
 		$userData['userName'] = $user->getName();
+		$userData['realName'] = $user->getRealName();
 
 		return $this->getResponseFactory()->createJson( [
 			'access' => true,
