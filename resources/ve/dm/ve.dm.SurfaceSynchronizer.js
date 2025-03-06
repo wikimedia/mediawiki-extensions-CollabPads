@@ -562,7 +562,9 @@ ve.dm.SurfaceSynchronizer.prototype.onNewChange = function ( serializedChange ) 
 	}
 	// Schedule submission of unsent local changes, if any
 	this.submitChangeThrottled();
-	this.updateAuthorsSinceLastChange();
+	if ( change.transactions && change.transactions.length ) {
+		this.updateAuthorsSinceLastChange();
+	}
 };
 
 ve.dm.SurfaceSynchronizer.prototype.onDisconnect = function () {
