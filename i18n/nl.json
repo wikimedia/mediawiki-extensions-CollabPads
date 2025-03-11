@@ -57,5 +57,7 @@
 	"collabpads-invalid-change-dialog-delete-button": "Verwijderen",
 	"collabpads-invalid-change-dialog-save-button": "Opslaan",
 	"collabpads-session-ended-title": "Sessie beëindigd",
-	"collabpads-session-ended-message": "De sessie is beëindigd."
+	"collabpads-session-ended-message": "De sessie is beëindigd.",
+	"collabpads-invalid-initialization-dialog-title": "Initialisatie mislukt",
+	"collabpads-invalid-initialization-dialog-message": "Deze pagina bevat inhoud die niet gezamenlijk kan worden bewerkt. Verwijder de sessie"
 }
