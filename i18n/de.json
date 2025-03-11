@@ -13,6 +13,7 @@
 	"collabpadsessions": "Meine CollabPad-Sitzungen",
 	"collabpadsessions-admin": "Meine CollabPad-Sitzungen",
 	"right-collabpadsessions-admin": "Verwalten aller CollabPad-Sitzungen",
+	"action-collabpadsessions-admin": "Alle CollabPad-Sitzungen verwalten",
 	"collabpads-content-action-text": "Gemeinsam bearbeiten",
 	"collabpads-content-action-tooltip": "Starte eine kollaborative Bearbeitungssitzung und lade andere Benutzer dazu ein",
 	"collabpads-start-dialog-title": "Willkommen im Modus \"Gemeinsam bearbeiten\"!",
@@ -22,6 +23,7 @@
 	"collabpads-toolbar-save-button": "Änderungen speichern …",
 	"collabpads-toolbar-save-button-label": "Speichern",
 	"collabpads-save-dialog-title": "Änderungen speichern",
+	"collabpads-save-dialog-save-button-label": "Speichern",
 	"collabpads-save-dialog-summary": "Zusammenfassung:",
 	"collabpads-save-dialog-minor-edit": "Nur Kleinigkeiten wurden verändert",
 	"collabpads-save-dialog-watch-page": "Seite beobachten",
@@ -61,5 +63,7 @@
 	"collabpads-invalid-change-dialog-delete-button": "Löschen",
 	"collabpads-invalid-change-dialog-save-button": "Speichern",
 	"collabpads-session-ended-title": "Sitzung beendet",
-	"collabpads-session-ended-message": "Die Sitzung wurde beendet."
+	"collabpads-session-ended-message": "Die Sitzung wurde beendet.",
+	"collabpads-invalid-initialization-dialog-title": "Initialisierung fehlgeschlagen",
+	"collabpads-invalid-initialization-dialog-message": "Diese Seite enthält Inhalte, die mit dem kollaborativen Editor nicht bearbeitet werden können. Bitte lösche die Sitzung"
 }
