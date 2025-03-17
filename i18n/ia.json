@@ -55,5 +55,6 @@
 	"collabpads-invalid-change-dialog-delete-button": "Deler",
 	"collabpads-invalid-change-dialog-save-button": "Salveguardar",
 	"collabpads-session-ended-title": "Session terminate",
-	"collabpads-session-ended-message": "Le session ha terminate."
+	"collabpads-session-ended-message": "Le session ha terminate.",
+	"collabpads-invalid-initialization-dialog-message": "Iste pagina include contento que non pote esser modificate con le editor collaborative. Per favor, dele le session."
 }
