@@ -69,7 +69,8 @@ class CollabPadAccessTokenDAO {
 			[
 				'cat_user_id' => $userId,
 				'cat_prefixed_page_title' => $titlePrefixedDbKey,
-			]
+			],
+			__METHOD__
 		);
 
 		// Return just empty string if no token was found, to match method return type
@@ -98,7 +99,8 @@ class CollabPadAccessTokenDAO {
 			[
 				'cat_token' => $token,
 				'cat_prefixed_page_title' => $titlePrefixedDbKey,
-			]
+			],
+			__METHOD__
 		);
 	}
 
