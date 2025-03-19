@@ -122,7 +122,8 @@ class CollabSessionManager {
 				's_page_title' => $pageTitle,
 				's_owner' => $user,
 				's_participants' => serialize( $participants )
-			]
+			],
+			__METHOD__
 		);
 	}
 

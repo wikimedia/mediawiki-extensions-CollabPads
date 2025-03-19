@@ -46,7 +46,8 @@ class CollabPadAccessTokenDAO {
 				'cat_user_id' => $userId,
 				'cat_prefixed_page_title' => $titlePrefixedDbKey,
 				'cat_token' => $token,
-			]
+			],
+			__METHOD__
 		);
 
 		return $token;
