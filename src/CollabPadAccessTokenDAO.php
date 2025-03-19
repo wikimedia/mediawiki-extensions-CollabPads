@@ -116,7 +116,8 @@ class CollabPadAccessTokenDAO {
 			[
 				'cat_user_id' => $userId,
 				'cat_prefixed_page_title' => $titlePrefixedDbKey,
-			]
+			],
+			__METHOD__
 		);
 	}
 }
