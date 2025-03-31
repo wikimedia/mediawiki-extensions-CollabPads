@@ -16,7 +16,8 @@
 		"bs": "readonly"
 	},
 	"rules": {
-		"camelcase": "off"
+		"camelcase": "off",
+		"no-jquery/no-done-fail": "warn"
 	},
 	"parserOptions": {
 		"ecmaVersion": 8
