@@ -44,7 +44,7 @@
 	"collabpads-clipboard-copy-fail": "URL konnte nicht in die Zwischenablage kopiert werden",
 	"collabpads-author-join": "$1 {{GENDER:$2|ist beigetreten}}",
 	"collabpads-author-leave": "$1 {{GENDER:$2|ist gegangen}}",
-	"collabpads-author-save": "$1 {{GENDER:$2|hat gepeichert}}",
+	"collabpads-author-save": "$1 {{GENDER:$2|hat gespeichert}}",
 	"collabpads-already-participating-title": "Bereits beigetreten",
 	"collabpads-already-participating-message": "Du bearbeitest diese Seite bereits",
 	"collabpads-namespace-label": "Namensraum",
