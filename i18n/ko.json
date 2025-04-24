@@ -39,5 +39,6 @@
 	"collabpads-session-ended-title": "세션이 종료되었습니다",
 	"collabpads-session-ended-message": "세션이 종료되었습니다.",
 	"collabpads-toolbar-save-button-label": "저장",
-	"collabpads-save-dialog-save-button-label": "저장"
+	"collabpads-save-dialog-save-button-label": "저장",
+	"collabpads-invalid-initialization-dialog-title": "초기화 실패"
 }

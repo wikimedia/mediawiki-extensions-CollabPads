@@ -43,7 +43,7 @@
 	"collabpads-clipboard-copy-fail": "URL konnte nicht in die Zwischenablage kopiert werden",
 	"collabpads-author-join": "$1 {{GENDER:$2|ist beigetreten}}",
 	"collabpads-author-leave": "$1 {{GENDER:$2|ist gegangen}}",
-	"collabpads-author-save": "$1 {{GENDER:$2|hat gepeichert}}",
+	"collabpads-author-save": "$1 {{GENDER:$2|hat gespeichert}}",
 	"collabpads-already-participating-title": "Bereits beigetreten",
 	"collabpads-already-participating-message": "Du bearbeitest diese Seite bereits",
 	"collabpads-namespace-label": "Namensraum",
@@ -62,5 +62,9 @@
 	"collabpads-invalid-change-dialog-save-button": "Speichern",
 	"collabpads-session-ended-title": "Sitzung beendet",
 	"collabpads-session-ended-message": "Die Sitzung wurde beendet.",
-	"collabpads-toolbar-save-button-label": "Speichern"
+	"collabpads-toolbar-save-button-label": "Speichern",
+	"action-collabpadsessions-admin": "Alle CollabPad-Sitzungen verwalten",
+	"collabpads-save-dialog-save-button-label": "Speichern",
+	"collabpads-invalid-initialization-dialog-title": "Initialisierung fehlgeschlagen",
+	"collabpads-invalid-initialization-dialog-message": "Diese Seite enthält Inhalte, die mit dem kollaborativen Editor nicht bearbeitet werden können. Bitte lösche die Sitzung"
 }

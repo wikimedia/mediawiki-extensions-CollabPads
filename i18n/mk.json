@@ -58,5 +58,8 @@
 	"collabpads-session-ended-title": "Седницата заврши",
 	"collabpads-session-ended-message": "Седницата е завршена.",
 	"collabpads-toolbar-save-button-label": "Зачувај",
-	"collabpads-save-dialog-save-button-label": "Зачувај"
+	"collabpads-save-dialog-save-button-label": "Зачувај",
+	"collabpads-recentchangesflags-letter": "С",
+	"collabpads-invalid-initialization-dialog-title": "Покревањето не успеа",
+	"collabpads-invalid-initialization-dialog-message": "Оваа страница има содржина која не може да се менува со соработниот уредник. Избришете ја седницата"
 }

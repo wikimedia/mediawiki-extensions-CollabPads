@@ -58,5 +58,7 @@
 	"collabpads-session-ended-title": "Sessie beëindigd",
 	"collabpads-session-ended-message": "De sessie is beëindigd.",
 	"collabpads-toolbar-save-button-label": "Opslaan",
-	"collabpads-save-dialog-save-button-label": "Opslaan"
+	"collabpads-save-dialog-save-button-label": "Opslaan",
+	"collabpads-invalid-initialization-dialog-title": "Initialisatie mislukt",
+	"collabpads-invalid-initialization-dialog-message": "Deze pagina bevat inhoud die niet gezamenlijk kan worden bewerkt. Verwijder de sessie"
 }
