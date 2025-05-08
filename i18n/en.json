@@ -62,5 +62,5 @@
 	"collabpads-session-ended-title": "Session ended",
 	"collabpads-session-ended-message": "The session has been ended.",
 	"collabpads-invalid-initialization-dialog-title": "Initialization failed",
-	"collabpads-invalid-initialization-dialog-message": "This page contains content that cannot be edited using the collaborative editor. Please delete the session"
+	"collabpads-invalid-initialization-dialog-message": "This page contains content that cannot be edited using the collaborative editor. Session failed to start"
 }
