@@ -35,6 +35,8 @@ ve.dm.SurfaceSynchronizer = function VeDmSurfaceSynchronizer( surface, documentI
 	this.authorSelections = {};
 	this.documentId = documentId;
 
+	this.silentSessionEnd = false;
+
 	// Whether the document has been initialized
 	this.initialized = false;
 	// Whether we are currently synchronizing the model
@@ -594,7 +596,15 @@ ve.dm.SurfaceSynchronizer.prototype.invalidChange = function () {
 };
 
 ve.dm.SurfaceSynchronizer.prototype.initFailed = function () {
-	this.openDialog( new collabpad.ui.InvalidInitializationDialog( this.surface ) );
+	const pageName = mw.config.get( 'wgTitle' );
+	mw.loader.using( [ 'ext.collabpads.api' ] ).then( () => {
+		const collabApi = new collabpads.api.Api();
+		collabApi.deleteSession( mw.config.get( 'wgNamespaceNumber' ), pageName );
+		this.silentSessionEnd = true;
+		this.socket.emit( 'deleteSession' );
+		this.openDialog( new collabpad.ui.InvalidInitializationDialog( this.surface ) );
+	} );
+
 };
 
 ve.dm.SurfaceSynchronizer.prototype.openDialog = function ( dialog ) {
@@ -606,6 +616,9 @@ ve.dm.SurfaceSynchronizer.prototype.openDialog = function ( dialog ) {
 
 ve.dm.SurfaceSynchronizer.prototype.onDeleteSession = function () {
 	this.socket.disconnect();
+	if ( this.silentSessionEnd ) {
+		return;
+	}
 	const windowManager = new OO.ui.WindowManager();
 	$( document.body ).append( windowManager.$element );
 	const sessionEndedDialog = new OO.ui.MessageDialog();

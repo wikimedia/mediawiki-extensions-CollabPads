@@ -27,13 +27,7 @@ collabpad.ui.InvalidInitializationDialog.static.name = 'InvalidInitializationDia
 collabpad.ui.InvalidInitializationDialog.static.title = mw.msg( 'collabpads-invalid-initialization-dialog-title' );
 collabpad.ui.InvalidInitializationDialog.static.message = mw.msg( 'collabpads-invalid-initialization-dialog-message' );
 collabpad.ui.InvalidInitializationDialog.static.size = 'medium';
-collabpad.ui.InvalidInitializationDialog.static.actions = [
-	{
-		label: mw.msg( 'collabpads-invalid-change-dialog-delete-button' ),
-		action: 'delete',
-		flags: [ 'destructive' ]
-	}
-];
+collabpad.ui.InvalidInitializationDialog.static.actions = [];
 
 /* Registration */
 ve.ui.windowFactory.register( collabpad.ui.InvalidInitializationDialog );
