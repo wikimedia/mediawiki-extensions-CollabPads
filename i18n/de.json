@@ -6,6 +6,7 @@
 			"Mukeber",
 			"Osnard",
 			"Pavlo Yashchenko",
+			"Vhoesl",
 			"[http://www.hallowelt.com Hallo Welt! GmbH]"
 		]
 	},
@@ -65,5 +66,5 @@
 	"collabpads-session-ended-title": "Sitzung beendet",
 	"collabpads-session-ended-message": "Die Sitzung wurde beendet.",
 	"collabpads-invalid-initialization-dialog-title": "Initialisierung fehlgeschlagen",
-	"collabpads-invalid-initialization-dialog-message": "Diese Seite enthält Inhalte, die mit dem kollaborativen Editor nicht bearbeitet werden können. Bitte lösche die Sitzung"
+	"collabpads-invalid-initialization-dialog-message": "Diese Seite enthält Inhalte, die nicht mit dem kollaborativen Editor bearbeitet werden können. Sitzung konnte nicht gestartet werden"
 }
