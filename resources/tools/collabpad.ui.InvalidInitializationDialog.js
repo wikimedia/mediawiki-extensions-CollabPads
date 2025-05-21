@@ -27,7 +27,22 @@ collabpad.ui.InvalidInitializationDialog.static.name = 'InvalidInitializationDia
 collabpad.ui.InvalidInitializationDialog.static.title = mw.msg( 'collabpads-invalid-initialization-dialog-title' );
 collabpad.ui.InvalidInitializationDialog.static.message = mw.msg( 'collabpads-invalid-initialization-dialog-message' );
 collabpad.ui.InvalidInitializationDialog.static.size = 'medium';
-collabpad.ui.InvalidInitializationDialog.static.actions = [];
+collabpad.ui.InvalidInitializationDialog.static.actions = [
+	{
+		label: mw.msg( 'collabpads-leave-dialog-leave-button' ),
+		action: 'leave'
+	}
+];
+
+collabpad.ui.InvalidInitializationDialog.prototype.getActionProcess = function ( action ) {
+	if ( action === 'leave' ) {
+		const title = mw.Title.newFromText( mw.config.get( 'wgPageName' ) );
+		window.location.href = title.getUrl();
+	}
+	return collabpad.ui.InvalidInitializationDialog.super.prototype.getActionProcess.call(
+		this, action
+	);
+};
 
 /* Registration */
 ve.ui.windowFactory.register( collabpad.ui.InvalidInitializationDialog );
