@@ -59,5 +59,5 @@
 	"collabpads-session-ended-title": "Session terminate",
 	"collabpads-session-ended-message": "Le session ha terminate.",
 	"collabpads-invalid-initialization-dialog-title": "Initialisation fallite",
-	"collabpads-invalid-initialization-dialog-message": "Iste pagina include contento que non pote esser modificate con le editor collaborative. Per favor, dele le session."
+	"collabpads-invalid-initialization-dialog-message": "Iste pagina include contento que non pote esser modificate con le editor collaborative. Le session ha fallite de initiar se"
 }
