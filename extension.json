@@ -152,7 +152,7 @@
 		},
 		"lastEditInfo": {
 			"class": "MediaWiki\\Extension\\CollabPads\\HookHandler\\LastEditInfo",
-			"services": [ "DBLoadBalancer" ]
+			"services": [ "DBLoadBalancer", "ChangeTagsStore" ]
 		},
 		"addModules": {
 			"class": "MediaWiki\\Extension\\CollabPads\\HookHandler\\AddModules"
