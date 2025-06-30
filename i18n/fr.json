@@ -61,5 +61,5 @@
 	"collabpads-session-ended-title": "Session terminée",
 	"collabpads-session-ended-message": "La session est terminée.",
 	"collabpads-invalid-initialization-dialog-title": "L'initialisation a échoué",
-	"collabpads-invalid-initialization-dialog-message": "Cette page contient du contenu qui ne peut pas être modifié à l'aide de l'éditeur collaboratif. Veuillez supprimer la session"
+	"collabpads-invalid-initialization-dialog-message": "Cette page contient du contenu qui ne peut pas être modifié à l'aide de l'éditeur collaboratif. Échec du démarrage de la session"
 }
