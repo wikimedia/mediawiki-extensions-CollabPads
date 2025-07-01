@@ -66,5 +66,5 @@
 	"collabpads-session-ended-title": "Sitzung beendet",
 	"collabpads-session-ended-message": "Die Sitzung wurde beendet.",
 	"collabpads-invalid-initialization-dialog-title": "Initialisierung fehlgeschlagen",
-	"collabpads-invalid-initialization-dialog-message": "Diese Seite enthält Inhalte, die nicht mit dem kollaborativen Editor bearbeitet werden können. Sitzung konnte nicht gestartet werden"
+	"collabpads-invalid-initialization-dialog-message": "Diese Seite enthält Inhalte, die nicht mit dem kollaborativen Editor bearbeitet werden können. Die Sitzung konnte nicht gestartet werden!"
 }
