@@ -55,7 +55,7 @@
 	"collabpads-last-edit-info": "Dernière modification le $1<br>par $2 et d'autres",
 	"collabpads-out-of-sync": "Votre client n'est pas synchronisé avec le serveur. La page va se recharger pour rétablir la connexion.",
 	"collabpads-invalid-change-dialog-title": "Changement invalide",
-	"collabpads-invalid-change-dialog-message": "Erreur lors de l'application des modifications. Veuillez enregistrer ou supprimer toutes les modifications.",
+	"collabpads-invalid-change-dialog-message": "Erreur lors de l'application des modifications. Essayez de recharger la page pour rétablir la connexion. Si l'erreur persiste, enregistrez les modifications ou supprimez la session.",
 	"collabpads-invalid-change-dialog-delete-button": "Supprimer",
 	"collabpads-invalid-change-dialog-save-button": "Enregistrer",
 	"collabpads-session-ended-title": "Session terminée",
