@@ -53,11 +53,11 @@
 	"collabpads-last-edit-info": "Laatst bewerkt $1<br />door $2 en anderen",
 	"collabpads-out-of-sync": "Uw cliëntprogramma loopt niet in de pas met de server. De pagina wordt opnieuw geladen om de verbinding te herstellen.",
 	"collabpads-invalid-change-dialog-title": "Foutieve wijziging",
-	"collabpads-invalid-change-dialog-message": "Fout bij het toepassen van de wijziging. Sla alle wijzigingen op of verwijder ze.",
+	"collabpads-invalid-change-dialog-message": "Fout bij het toepassen van de wijziging. Probeer de pagina opnieuw te laden om de verbinding te herstellen. Als de fout nog steeds optreedt, sla dan de wijzigingen op of verwijder de sessie.",
 	"collabpads-invalid-change-dialog-delete-button": "Verwijderen",
 	"collabpads-invalid-change-dialog-save-button": "Opslaan",
 	"collabpads-session-ended-title": "Sessie beëindigd",
 	"collabpads-session-ended-message": "De sessie is beëindigd.",
 	"collabpads-invalid-initialization-dialog-title": "Initialisatie mislukt",
-	"collabpads-invalid-initialization-dialog-message": "Deze pagina bevat inhoud die niet gezamenlijk kan worden bewerkt. Verwijder de sessie"
+	"collabpads-invalid-initialization-dialog-message": "Deze pagina bevat inhoud die niet gezamenlijk kan worden bewerkt. De sessie kon niet worden opgestart."
 }
