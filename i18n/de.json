@@ -6,6 +6,7 @@
 			"Mukeber",
 			"Osnard",
 			"Pavlo Yashchenko",
+			"Vhoesl",
 			"[http://www.hallowelt.com Hallo Welt! GmbH]"
 		]
 	},
@@ -57,7 +58,7 @@
 	"collabpads-last-edit-info": "Zuletzt bearbeitet $1<br />von $2 und anderen",
 	"collabpads-out-of-sync": "Ihr Client ist nicht mit dem Server synchron. Die Seite wird neu geladen, um die Verbindung wiederherzustellen.",
 	"collabpads-invalid-change-dialog-title": "Ungültige Änderung",
-	"collabpads-invalid-change-dialog-message": "Fehler beim Anwenden der Änderung. Bitte speichern oder löschen Sie alle Änderungen.",
+	"collabpads-invalid-change-dialog-message": "Fehler beim Anwenden der Änderung. Versuche die Seite neu zu laden, um die Verbindung wiederherzustellen. Wenn der Fehler weiterhin auftritt, speichere entweder die Änderungen oder lösche die Sitzung.",
 	"collabpads-invalid-change-dialog-delete-button": "Löschen",
 	"collabpads-invalid-change-dialog-save-button": "Speichern",
 	"collabpads-session-ended-title": "Sitzung beendet",
@@ -66,5 +67,5 @@
 	"action-collabpadsessions-admin": "Alle CollabPad-Sitzungen verwalten",
 	"collabpads-save-dialog-save-button-label": "Speichern",
 	"collabpads-invalid-initialization-dialog-title": "Initialisierung fehlgeschlagen",
-	"collabpads-invalid-initialization-dialog-message": "Diese Seite enthält Inhalte, die mit dem kollaborativen Editor nicht bearbeitet werden können. Bitte lösche die Sitzung"
+	"collabpads-invalid-initialization-dialog-message": "Diese Seite enthält Inhalte, die nicht mit dem kollaborativen Editor bearbeitet werden können. Die Sitzung konnte nicht gestartet werden!"
 }

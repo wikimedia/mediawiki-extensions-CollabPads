@@ -53,11 +53,11 @@
 	"collabpads-last-edit-info": "Ultime modification le $1<br />per $2 e alteres",
 	"collabpads-out-of-sync": "Tu cliente non es synchronisate con le servitor. Le pagina va recargar se pro restabilir le connexion.",
 	"collabpads-invalid-change-dialog-title": "Cambiamento invalide",
-	"collabpads-invalid-change-dialog-message": "Error applicante le cambiamento. Per favor salveguarda o dele tote le cambiamentos.",
+	"collabpads-invalid-change-dialog-message": "Error applicante le cambiamento. Tenta recargar le pagina pro restabilir le connexion. Si le error persiste, salveguarda le cambiamentos o dele le session.",
 	"collabpads-invalid-change-dialog-delete-button": "Deler",
 	"collabpads-invalid-change-dialog-save-button": "Salveguardar",
 	"collabpads-session-ended-title": "Session terminate",
 	"collabpads-session-ended-message": "Le session ha terminate.",
 	"collabpads-invalid-initialization-dialog-title": "Initialisation fallite",
-	"collabpads-invalid-initialization-dialog-message": "Iste pagina include contento que non pote esser modificate con le editor collaborative. Per favor, dele le session."
+	"collabpads-invalid-initialization-dialog-message": "Iste pagina include contento que non pote esser modificate con le editor collaborative. Le session ha fallite de initiar se"
 }

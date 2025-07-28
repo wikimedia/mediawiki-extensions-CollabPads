@@ -55,7 +55,7 @@
 	"collabpads-last-edit-info": "Last edited $1<br />by $2 and others",
 	"collabpads-out-of-sync": "Your client is out of sync with the server. The page will reload to re-establish the connection.",
 	"collabpads-invalid-change-dialog-title": "Invalid change",
-	"collabpads-invalid-change-dialog-message": "Error applying change. Please either save or delete all changes.",
+	"collabpads-invalid-change-dialog-message": "Error applying change. Try to reload the page to re-establish the connection. If you still see the error, either save the changes or delete the session",
 	"collabpads-invalid-change-dialog-delete-button": "Delete",
 	"collabpads-invalid-change-dialog-save-button": "Save",
 	"collabpads-session-ended-title": "Session ended",
@@ -63,5 +63,5 @@
 	"collabpads-toolbar-save-button-label": "Save",
 	"collabpads-save-dialog-save-button-label": "Save",
 	"collabpads-invalid-initialization-dialog-title": "Initialization failed",
-	"collabpads-invalid-initialization-dialog-message": "This page contains content that cannot be edited using the collaborative editor. Please delete the session"
+	"collabpads-invalid-initialization-dialog-message": "This page contains content that cannot be edited using the collaborative editor. Session failed to start"
 }

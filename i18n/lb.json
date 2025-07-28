@@ -52,7 +52,7 @@
 	"collabpads-last-edit-info": "Fir d'lescht geännert: $1<br />vum $2 an aneren",
 	"collabpads-out-of-sync": "Äre Client ass net mam Server synchron. D'Säit gëtt nei geluede fir d'Verbindung nei opzebauen.",
 	"collabpads-invalid-change-dialog-title": "Ongülteg Ännerung",
-	"collabpads-invalid-change-dialog-message": "Feeler beim Uwende vun der Ännerung. Späichert oder läscht wgl. all Ännerungen.",
+	"collabpads-invalid-change-dialog-message": "Feeler beim Uwende vun der Ännerung. Probéiert wgl. d'Säit nei ze luede fir d'Verbindung erëm hierzestellen. Falls Dir dann nach ëmmer de Feeler gesitt, späichert entweeder d'Ännerungen oder läscht d'Sitzung.",
 	"collabpads-invalid-change-dialog-delete-button": "Läschen",
 	"collabpads-invalid-change-dialog-save-button": "Späicheren",
 	"collabpads-session-ended-title": "Sitzung eriwwer",
