@@ -2,13 +2,12 @@
 
 namespace MediaWiki\Extension\CollabPads\HookHandler;
 
-use BlueSpice\SaferEdit\Hook\BSSaferEditMessage;
-use MediaWiki\Context\RequestContext;
+use BlueSpice\SaferEdit\Hook\BSSaferEditMessageDataHook;
 use MediaWiki\Html\Html;
 use MediaWiki\Title\Title;
 use Wikimedia\Rdbms\LoadBalancer;
 
-class SaferEditMessage implements BSSaferEditMessage {
+class SaferEditMessage implements BSSaferEditMessageDataHook {
 
 	/** @var LoadBalancer */
 	private $loadBalancer;
@@ -23,15 +22,13 @@ class SaferEditMessage implements BSSaferEditMessage {
 	/**
 	 * @inheritDoc
 	 */
-	public function onBSSaferEditMessage( Title $title, string &$message ): void {
-		$editAction = RequestContext::getMain()->getRequest()->getText( 'veaction', '' );
-		if ( $editAction ) {
-			$message = '';
-			return;
-		}
-
+	public function onBSSaferEditMessageData( Title $title, array &$data ): void {
 		if ( $this->hasCollabPadsSession( $title ) ) {
-			$message = $this->makeCollabPadsMessage( $title );
+			$data = [
+				'message' => 'collabpads-bs-saferedit-editing',
+				'params' => [ $this->makeCollabPadsAnchor( $title ) ],
+				'hideForCurrentUser' => true,
+			];
 		}
 	}
 
@@ -62,15 +59,11 @@ class SaferEditMessage implements BSSaferEditMessage {
 	 * @param Title $title
 	 * @return string
 	 */
-	private function makeCollabPadsMessage( Title $title ): string {
+	private function makeCollabPadsAnchor( Title $title ): string {
 		$collabPadsEditLink = $title->getFullURL( [ 'veaction' => 'collab-edit' ] );
-		$linkHtml = Html::element( 'a',
-			[ 'href' => $collabPadsEditLink	],
+		return Html::element( 'a',
+			[ 'href' => $collabPadsEditLink ],
 			wfMessage( 'collabpads-bs-saferedit-editing-link-text' )->text()
 		);
-
-		$messageHtml = wfMessage( 'collabpads-bs-saferedit-editing' )->params( $linkHtml )->plain();
-
-		return $messageHtml;
 	}
 }

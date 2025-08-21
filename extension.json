@@ -177,7 +177,7 @@
 		"ContribsPager::getQueryInfo": "IntegrateIntoContributions",
 		"SpecialContributions::formatRow::flags": "IntegrateIntoContributions",
 		"GetPreferences": "userPreference",
-		"BSSaferEditMessage": "saferEditMessage",
+		"BSSaferEditMessageData": "saferEditMessage",
 		"BSArticleInfoSkip": "articleInfoSkip",
 		"getUserPermissionsErrors": "BlockDefaultEdit",
 		"LastEditInfo": "lastEditInfo",
@@ -389,6 +389,11 @@
 		"ext.collabpads.enhanced.history": {
 			"scripts": [
 				"ext.collabpads.enhanced.history.js"
+			]
+		},
+		"ext.collabpads.saferedit.message": {
+			"messages": [
+				"collabpads-bs-saferedit-editing"
 			]
 		}
 	},
