@@ -17,6 +17,7 @@ class AddModules implements BeforePageDisplayHook {
 		if ( !$title ) {
 			return;
 		}
+		$out->addModules( [ 'ext.collabpads.saferedit.message' ] );
 
 		$isHistory = $out->getRequest()->getText( 'action', 'view' ) === 'history';
 		$isRecentChanges = $title->isSpecial( 'Recentchanges' );
