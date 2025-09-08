@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mohammed Qays"
+			"Mohammed Qays",
+			"Meno25"
 		]
 	},
 	"collabpads-desc": "يسمح بالتحرير التعاوني لصفحات الويكي",
@@ -37,12 +38,20 @@
 	"collabpads-clipboard-copy-fail": "فشل نسخ المسار إلى الحافظة.",
 	"collabpads-author-join": "$1 {{GENDER:$2|انظم|انظمت}}",
 	"collabpads-author-leave": "$1 {{GENDER:$2|غادر|غادرت}}",
+	"collabpads-author-save": "$1 {{GENDER:$2|تم الحفظ}}",
 	"collabpads-already-participating-title": "انضم بالفعل",
 	"collabpads-already-participating-message": "أنت تحرّر هذه الصفحة بالفعل",
 	"collabpads-namespace-label": "النطاق",
 	"collabpads-page-label": "الصفحة",
 	"collabpads-owner-label": "المالك",
 	"collabpads-participants-label": "المشاركون",
+	"collabpads-bs-saferedit-editing": "يتم حاليًا تحرير هذه الصفحة في وضع \"التحرير معًا\". $1",
+	"collabpads-bs-saferedit-editing-link-text": "يمكنك الانضمام",
+	"collabpads-normal-edit-blocked": "سيتم حظر التحرير العادي إذا كانت جلسة تعاونية قيد التشغيل بالفعل على الصفحة.",
+	"collabpads-save-complete-notif": "تم حفظ الصفحة",
+	"collabpads-last-edit-info": "آخر تعديل $1<br /> بـ $2 وآخرين",
+	"collabpads-out-of-sync": "عميلك غير متزامن مع الخادم. سيتم إعادة تحميل الصفحة لإعادة الاتصال.",
+	"collabpads-invalid-change-dialog-title": "تغيير غير صالح",
 	"collabpads-invalid-change-dialog-delete-button": "حذف",
 	"collabpads-invalid-change-dialog-save-button": "حفظ",
 	"collabpads-session-ended-title": "انتهت الجلسة",
