@@ -38,7 +38,7 @@
 	"collabpads-clipboard-copy-fail": "فشل نسخ المسار إلى الحافظة.",
 	"collabpads-author-join": "$1 {{GENDER:$2|انظم|انظمت}}",
 	"collabpads-author-leave": "$1 {{GENDER:$2|غادر|غادرت}}",
-	"collabpads-author-save": "$1 {{GENDER:$2|تم الحفظ}}",
+	"collabpads-author-save": "$1 {{GENDER:$2|حفظ}}",
 	"collabpads-already-participating-title": "انضم بالفعل",
 	"collabpads-already-participating-message": "أنت تحرّر هذه الصفحة بالفعل",
 	"collabpads-namespace-label": "النطاق",
