@@ -577,7 +577,7 @@ ve.dm.SurfaceSynchronizer.prototype.onDisconnect = function () {
 ve.dm.SurfaceSynchronizer.prototype.updateAuthorsSinceLastChange = function () {
 	for ( const authorId in this.authors ) {
 		const authorName = this.authors[ authorId ].name;
-		if ( this.authorsSinceLastSave.indexOf( authorName ) === -1 ) {
+		if ( this.authorsSinceLastSave.includes( authorName ) ) {
 			this.authorsSinceLastSave.push( authorName );
 		}
 	}
