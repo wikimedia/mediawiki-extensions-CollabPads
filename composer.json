@@ -14,7 +14,8 @@
 		"installer-name": "CollabPads"
 	},
 	"require": {
-		"composer/installers": "~1.0|~2"
+		"composer/installers": "~1.0|~2",
+		"mwstake/mediawiki-component-manifestregistry": "~3.0"
 	},
 	"require-dev": {
 		"mediawiki/mediawiki-codesniffer": "45.0.0",
