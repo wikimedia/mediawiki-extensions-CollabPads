@@ -44,7 +44,7 @@ class IntegrateIntoContributions
 	 * @inheritDoc
 	 */
 	public function onContribsPager__getQueryInfo( $pager, &$queryInfo ) {
-		$title = $pager->getRequest()->getValues()['title'];
+		$title = $pager->getRequest()->getText( 'title', '' );
 		$userName = str_replace( "Special:Contributions/", "", $title );
 		$user = $this->userFactory->newFromName( $userName );
 		if ( !$user ) {
