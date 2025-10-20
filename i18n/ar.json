@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Meno25",
 			"Mohammed Qays"
 		]
 	},
@@ -50,5 +51,14 @@
 	"collabpads-session-ended-title": "انتهت الجلسة",
 	"collabpads-session-ended-message": "لقد انتهت الجلسة.",
 	"collabpads-invalid-initialization-dialog-title": "فشل التهيئة",
-	"collabpads-invalid-initialization-dialog-message": "تحوي هذه الصفحة على محتوى لا يمكن تحريره باستخدام المحرر التعاوني. فشلت الجلسة في البدء."
+	"collabpads-invalid-initialization-dialog-message": "تحوي هذه الصفحة على محتوى لا يمكن تحريره باستخدام المحرر التعاوني. فشلت الجلسة في البدء.",
+	"collabpads-author-save": "$1 {{GENDER:$2|حفظ}}",
+	"collabpads-bs-saferedit-editing": "يتم حاليًا تحرير هذه الصفحة في وضع \"التحرير معًا\". $1",
+	"collabpads-bs-saferedit-editing-link-text": "يمكنك الانضمام",
+	"collabpads-normal-edit-blocked": "سيتم حظر التحرير العادي إذا كانت جلسة تعاونية قيد التشغيل بالفعل على الصفحة.",
+	"collabpads-save-complete-notif": "تم حفظ الصفحة",
+	"collabpads-last-edit-info": "آخر تعديل $1<br /> بـ $2 وآخرين",
+	"collabpads-out-of-sync": "عميلك غير متزامن مع الخادم. سيتم إعادة تحميل الصفحة لإعادة الاتصال.",
+	"collabpads-invalid-change-dialog-title": "تغيير غير صالح",
+	"collabpads-invalid-change-dialog-message": "حدث خطأ أثناء تطبيق التغيير. حاول إعادة تحميل الصفحة لإعادة الاتصال. إذا استمر ظهور الخطأ، فاحفظ التغييرات أو احذف الجلسة."
 }
