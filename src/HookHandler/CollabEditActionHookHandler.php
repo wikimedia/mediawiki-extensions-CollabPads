@@ -65,8 +65,8 @@ class CollabEditActionHookHandler implements
 
 		$veTab = [
 			'href' => $title->getLocalURL( [ 'veaction' => 'collab-edit' ] ),
-			'text' => Message::newFromKey( 'collabpads-content-action-text' )->plain(),
-			'title' => Message::newFromKey( 'collabpads-content-action-tooltip' )->plain(),
+			'text' => Message::newFromKey( 'collabpads-content-action-text' )->text(),
+			'title' => Message::newFromKey( 'collabpads-content-action-tooltip' )->text(),
 			'primary' => true,
 			'class' => '',
 		];
