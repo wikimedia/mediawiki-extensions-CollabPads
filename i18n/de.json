@@ -15,7 +15,7 @@
 	"collabpadsessions-admin": "Meine CollabPad-Sitzungen",
 	"right-collabpadsessions-admin": "Verwalten aller CollabPad-Sitzungen",
 	"collabpads-content-action-text": "Gemeinsam bearbeiten",
-	"collabpads-content-action-tooltip": "Starte eine kollaborative Bearbeitungssitzung und lade andere Benutzer dazu ein",
+	"collabpads-content-action-tooltip": "{{#FORMAL:Starte|Starten Sie}} eine kollaborative Bearbeitungssitzung und {{#FORMAL:lade|laden Sie}} andere Benutzer dazu ein",
 	"collabpads-start-dialog-title": "Willkommen im Modus \"Gemeinsam bearbeiten\"!",
 	"collabpads-start-dialog-message": "Im Modus \"Gemeinsam bearbeiten\" können mehrere Benutzer gleichzeitig zusammenarbeiten, um die Seite zu bearbeiten.",
 	"collabpads-start-label": "Start",
