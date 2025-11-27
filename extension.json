@@ -9,7 +9,7 @@
 	"descriptionmsg": "collabpads-desc",
 	"license-name": "GPL-3.0-only",
 	"type": "other",
-	"version": "2.0.4",
+	"version": "2.0.5",
 	"requires": {
 		"MediaWiki": ">= 1.43.0",
 		"extensions": {
