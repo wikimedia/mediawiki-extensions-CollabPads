@@ -390,6 +390,18 @@
 			"scripts": [
 				"ext.collabpads.enhanced.history.js"
 			]
+		},
+		"ext.collabpads.title": {
+			"scripts": [
+				"ext.collabpads.title.js"
+			],
+			"dependencies": [
+				"ext.visualEditor.desktopArticleTarget.init"
+			],
+			"messages": [
+				"pagetitle",
+				"editing"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
