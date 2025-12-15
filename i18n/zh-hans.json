@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Lakejason0"
+			"Lakejason0",
+			"Peterxy12"
 		]
 	},
 	"collabpads-desc": "允许协作编辑wiki页面",
@@ -55,5 +56,6 @@
 	"collabpads-invalid-change-dialog-delete-button": "删除",
 	"collabpads-invalid-change-dialog-save-button": "保存",
 	"collabpads-session-ended-title": "会话已结束",
-	"collabpads-session-ended-message": "此会话已结束。"
+	"collabpads-session-ended-message": "此会话已结束。",
+	"collabpads-invalid-initialization-dialog-title": "初始化失败"
 }
