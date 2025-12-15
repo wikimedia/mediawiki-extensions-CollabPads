@@ -395,6 +395,18 @@
 			"messages": [
 				"collabpads-bs-saferedit-editing"
 			]
+		},
+		"ext.collabpads.title": {
+			"scripts": [
+				"ext.collabpads.title.js"
+			],
+			"dependencies": [
+				"ext.visualEditor.desktopArticleTarget.init"
+			],
+			"messages": [
+				"pagetitle",
+				"editing"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
