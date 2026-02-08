@@ -4,9 +4,9 @@ namespace MediaWiki\Extension\CollabPads\Special;
 
 use MediaWiki\Html\Html;
 use MediaWiki\Permissions\PermissionManager;
-use MediaWiki\SpecialPage\SpecialPage;
+use MediaWiki\SpecialPage\UnlistedSpecialPage;
 
-class CollabPadSessions extends SpecialPage {
+class CollabPadSessions extends UnlistedSpecialPage {
 
 	/** @var PermissionManager */
 	private $permissionManager;
@@ -16,7 +16,7 @@ class CollabPadSessions extends SpecialPage {
 	 */
 	public function __construct( PermissionManager $permissionManager ) {
 		$this->permissionManager = $permissionManager;
-		parent::__construct( 'CollabPadSessions', '', false );
+		parent::__construct( 'CollabPadSessions' );
 	}
 
 	/**
