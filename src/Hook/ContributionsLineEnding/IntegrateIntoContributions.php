@@ -11,6 +11,7 @@ use MediaWiki\Html\Html;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Title\Title;
 use MediaWiki\User\UserFactory;
+use stdClass;
 
 class IntegrateIntoContributions
 	implements ContribsPager__getQueryInfoHook, SpecialContributions__formatRow__flagsHook {
@@ -70,7 +71,7 @@ class IntegrateIntoContributions
 	 */
 	public function onSpecialContributions__formatRow__flags( $context, $row, &$flags ) {
 		$collapPadSession = $this->collabRevisionManager->getSessionByRevId( $row->rev_id );
-		if ( !empty( $collapPadSession ) ) {
+		if ( $collapPadSession ) {
 			array_unshift( $flags, ChangesList::flag( 'collab-edit' ) );
 		}
 	}
@@ -86,7 +87,7 @@ class IntegrateIntoContributions
 	) {
 		$collabpadParticipants = $this->collabRevisionManager->getParticipants( (int)$row->rev_id );
 
-		if ( !empty( $collabpadParticipants ) ) {
+		if ( $collabpadParticipants ) {
 			$participantLinks = '';
 			foreach ( $collabpadParticipants as $key => $participant ) {
 				$participantLinks .= Html::rawElement(

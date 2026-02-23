@@ -5,6 +5,7 @@ namespace MediaWiki\Extension\CollabPads;
 use BlueSpice\Discovery\ITitleActionPrimaryActionModifier;
 
 class CollabEditActionModifier implements ITitleActionPrimaryActionModifier {
+// @phan-suppress-previous-line PhanUndeclaredInterface
 
 	/**
 	 * @param array $ids

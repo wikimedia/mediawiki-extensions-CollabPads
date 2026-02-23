@@ -34,7 +34,7 @@ class IntegrateIntoHistory implements PageHistoryLineEndingHook {
 	public function onPageHistoryLineEnding( $history, &$row, &$html, &$classes, &$attribs ) {
 		$collabpadParticipants = $this->collabRevisionManager->getParticipants( (int)$row->rev_id );
 
-		if ( !empty( $collabpadParticipants ) ) {
+		if ( $collabpadParticipants ) {
 			$participantLinks = '';
 			// Create the participants section
 			foreach ( $collabpadParticipants as $key => $participant ) {

@@ -7,6 +7,7 @@ use MediaWiki\Extension\EnhancedStandardUIs\IHistoryPlugin;
 use Wikimedia\Rdbms\ILoadBalancer;
 
 class CollabPadsHistoryPlugin implements IHistoryPlugin {
+// @phan-suppress-previous-line PhanUndeclaredInterface
 
 	/** @var ILoadBalancer */
 	private $loadBalancer;

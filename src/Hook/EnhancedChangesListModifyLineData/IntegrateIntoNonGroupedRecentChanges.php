@@ -33,8 +33,8 @@ class IntegrateIntoNonGroupedRecentChanges implements EnhancedChangesListModifyB
 	 */
 	public function onEnhancedChangesListModifyBlockLineData( $changesList, &$data, $rc ): void {
 		$revId = intval( $rc->getAttribute( 'rc_this_oldid' ) );
-		$collabpadParticipants = $this->collabRevisionManager->getParticipants( (int)$revId );
-		if ( !empty( $collabpadParticipants ) ) {
+		$collabpadParticipants = $this->collabRevisionManager->getParticipants( $revId );
+		if ( $collabpadParticipants ) {
 			$participantLinks = '';
 			// Create the participants section
 			foreach ( $collabpadParticipants as $key => $participant ) {

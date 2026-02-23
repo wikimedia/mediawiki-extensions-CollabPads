@@ -8,6 +8,7 @@ use MediaWiki\Title\Title;
 use Wikimedia\Rdbms\LoadBalancer;
 
 class SaferEditMessage implements BSSaferEditMessageDataHook {
+// @phan-suppress-previous-line PhanUndeclaredInterface
 
 	/** @var LoadBalancer */
 	private $loadBalancer;

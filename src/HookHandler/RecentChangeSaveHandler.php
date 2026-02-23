@@ -35,7 +35,7 @@ class RecentChangeSaveHandler implements RecentChange_saveHook {
 		$title = $recentChange->getAttribute( 'rc_title' );
 		$session = $this->collabSessionManager->getSession( $namespace, $title );
 
-		if ( !empty( $session ) ) {
+		if ( $session ) {
 			$recentChange->addTags( [ 'collab-edit' ] );
 		}
 	}

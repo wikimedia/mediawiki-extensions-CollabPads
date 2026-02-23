@@ -9,6 +9,7 @@ use MediaWiki\Revision\RevisionRecord;
 use Wikimedia\Rdbms\LoadBalancer;
 
 class LastEditInfo implements LastEditInfoHook {
+// @phan-suppress-previous-line PhanUndeclaredInterface
 
 	/** @var LoadBalancer */
 	private $loadBalancer;

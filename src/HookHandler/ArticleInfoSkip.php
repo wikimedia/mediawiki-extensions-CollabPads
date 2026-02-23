@@ -7,6 +7,7 @@ use MediaWiki\Title\Title;
 use Wikimedia\Rdbms\LoadBalancer;
 
 class ArticleInfoSkip implements BSArticleInfoSkipHook {
+// @phan-suppress-previous-line PhanUndeclaredInterface
 
 	/** @var LoadBalancer */
 	private $loadBalancer;

@@ -35,9 +35,9 @@ class IntegrateIntoGroupedRecentChanges implements EnhancedChangesListModifyLine
 		$block, $rc, &$classes, &$attribs
 	) {
 		$revId = intval( $rc->getAttribute( 'rc_this_oldid' ) );
-		$collabpadParticipants = $this->collabRevisionManager->getParticipants( (int)$revId );
+		$collabpadParticipants = $this->collabRevisionManager->getParticipants( $revId );
 
-		if ( !empty( $collabpadParticipants ) ) {
+		if ( $collabpadParticipants ) {
 			$participantLinks = '';
 			foreach ( $collabpadParticipants as $key => $participant ) {
 				$participantLinks .= Html::rawElement(

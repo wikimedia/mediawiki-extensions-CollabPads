@@ -10,6 +10,7 @@ use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Title\Title;
 
 class DiscoverySkin implements BlueSpiceDiscoveryTemplateDataProviderAfterInit {
+// @phan-suppress-previous-line PhanUndeclaredInterface
 
 	/** @var CollabSessionManager */
 	private $collabSessionManager;
@@ -31,18 +32,23 @@ class DiscoverySkin implements BlueSpiceDiscoveryTemplateDataProviderAfterInit {
 	 * @return void
 	 */
 	public function onBlueSpiceDiscoveryTemplateDataProviderAfterInit( $registry ): void {
+		// @phan-suppress-previous-line PhanUndeclaredTypeParameter
 		$title = RequestContext::getMain()->getTitle();
 		if ( !$title || !$title->isContentPage() ) {
 			return;
 		}
 
+		// @phan-suppress-next-line PhanUndeclaredClassMethod
 		$registry->register( 'panel/edit', 'ca-collabpad' );
 
 		$session = $this->collabSessionManager->getSessionExistsByName(	$title->getNamespace(),	$title->getDBkey() );
 		if ( $session ) {
 			// Disable other edit actions when CollabPad session is active
+			// @phan-suppress-next-line PhanUndeclaredClassMethod
 			$registry->unregister( 'panel/edit', 'ca-new-section' );
+			// @phan-suppress-next-line PhanUndeclaredClassMethod
 			$registry->unregister( 'panel/edit', 'ca-ve-edit' );
+			// @phan-suppress-next-line PhanUndeclaredClassMethod
 			$registry->unregister( 'panel/edit', 'ca-edit' );
 			return;
 		}
@@ -57,6 +63,7 @@ class DiscoverySkin implements BlueSpiceDiscoveryTemplateDataProviderAfterInit {
 	 * @param ITemplateDataProvider $registry
 	 */
 	protected function maybeDisableContentAction( Title $title, ITemplateDataProvider $registry ): void {
+		// @phan-suppress-previous-line PhanUndeclaredTypeParameter
 		$this->hookContainer->run(
 			'CollabPadsAfterAddContentAction',
 			[ $title, $registry ]

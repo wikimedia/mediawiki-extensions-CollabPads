@@ -7,6 +7,7 @@ use MediaWiki\Context\RequestContext;
 use MediaWiki\Title\Title;
 
 class CollabEditProvider extends BaseBreadcrumbDataProvider {
+// @phan-suppress-previous-line PhanUndeclaredExtendedClass
 
 	/**
 	 * @param Title $title
@@ -14,6 +15,7 @@ class CollabEditProvider extends BaseBreadcrumbDataProvider {
 	 */
 	public function getLabels( $title ): array {
 		return [
+			// @phan-suppress-next-line PhanUndeclaredProperty
 			'text' => $this->messageLocalizer->msg( 'collabpads-content-action-text' )
 		];
 	}
