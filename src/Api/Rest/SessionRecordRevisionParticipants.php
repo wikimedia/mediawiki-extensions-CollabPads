@@ -2,8 +2,10 @@
 
 namespace MediaWiki\Extension\CollabPads\Api\Rest;
 
+use InvalidArgumentException;
 use MediaWiki\Extension\CollabPads\CollabRevisionManager;
 use MediaWiki\Extension\CollabPads\CollabSessionManager;
+use MediaWiki\Rest\Response;
 use MediaWiki\Revision\RevisionLookup;
 use MediaWiki\User\ActorNormalization;
 use Wikimedia\ParamValidator\ParamValidator;
@@ -44,16 +46,30 @@ class SessionRecordRevisionParticipants extends CollabSessionHandlerBase {
 		$this->loadBalancer = $loadBalancer;
 	}
 
+	/**
+	 * @return Response
+	 * @throws InvalidArgumentException
+	 */
 	public function run() {
 		$request = $this->getRequest();
 
-		$pageNamespace = $request->getPathParam( "pageNamespace" );
-		$pageTitle = $request->getPathParam( "pageTitle" );
-		$pageTitle = $this->unmaskPageTitle( $pageTitle );
+		$pageNamespaceRaw = $request->getPathParam( "pageNamespace" );
+		$pageTitleRaw = $request->getPathParam( "pageTitle" );
 		$revisionId = $request->getPathParam( "revisionId" );
 
+		if ( !$pageNamespaceRaw || !$pageTitleRaw || !$revisionId ) {
+			throw new InvalidArgumentException( 'Missing required path parameters' );
+		}
+
+		if ( !ctype_digit( $pageNamespaceRaw ) ) {
+			throw new InvalidArgumentException( 'Invalid namespace parameter' );
+		}
+
+		$pageNamespace = (int)$pageNamespaceRaw;
+		$pageTitle = $this->unmaskPageTitle( $pageTitleRaw );
+
 		$session = $this->collabSessionManager->getSession( $pageNamespace, $pageTitle );
-		if ( empty( $session ) ) {
+		if ( !$session ) {
 			return $this->getResponseFactory()->createJson( [
 				'success' => false,
 				'error' => 'No session found',
@@ -73,7 +89,7 @@ class SessionRecordRevisionParticipants extends CollabSessionHandlerBase {
 			$this->loadBalancer->getConnection( DB_PRIMARY )
 		);
 
-		$participantUsernames = json_decode( $request->getBody()->getContents(), JSON_UNESCAPED_SLASHES );
+		$participantUsernames = json_decode( $request->getBody()->getContents() );
 
 		try {
 			// The participants of a revision can only be recorded once!

@@ -2,7 +2,9 @@
 
 namespace MediaWiki\Extension\CollabPads\Api\Rest;
 
+use InvalidArgumentException;
 use MediaWiki\Extension\CollabPads\CollabSessionManager;
+use MediaWiki\Rest\Response;
 use Wikimedia\ParamValidator\ParamValidator;
 
 class GetSessionExistsHandler extends CollabSessionHandlerBase {
@@ -16,17 +18,34 @@ class GetSessionExistsHandler extends CollabSessionHandlerBase {
 		parent::__construct( $collabSessionManager );
 	}
 
+	/**
+	 * @return Response
+	 * @throws InvalidArgumentException
+	 */
 	public function run() {
 		$request = $this->getRequest();
 
-		$pageNamespace = $request->getPathParam( "pageNamespace" );
-		$pageTitle = $request->getPathParam( "pageTitle" );
-		$pageTitle = $this->unmaskPageTitle( $pageTitle );
+		$pageNamespaceRaw = $request->getPathParam( "pageNamespace" );
+		$pageTitleRaw = $request->getPathParam( "pageTitle" );
+
+		if ( !$pageNamespaceRaw || !$pageTitleRaw ) {
+			throw new InvalidArgumentException( 'Missing required path parameters' );
+		}
+
+		if ( !ctype_digit( $pageNamespaceRaw ) ) {
+			throw new InvalidArgumentException( 'Invalid namespace parameter' );
+		}
+
+		$pageNamespace = (int)$pageNamespaceRaw;
+		$pageTitle = $this->unmaskPageTitle( $pageTitleRaw );
+
 		$sessionPermissions = $this->collabSessionManager->getSessionExistsByName( $pageNamespace, $pageTitle );
-		if ( empty( $sessionPermissions ) ) {
+		if ( !$sessionPermissions ) {
 			return $this->getResponseFactory()->createJson( [ 'session_exist' => false ] );
 		}
+
 		$output = [ 'session_exist' => true ];
+
 		return $this->getResponseFactory()->createJson( $output );
 	}
 

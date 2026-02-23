@@ -2,15 +2,32 @@
 
 namespace MediaWiki\Extension\CollabPads\Api\Rest;
 
+use InvalidArgumentException;
+use MediaWiki\Rest\Response;
 use Wikimedia\ParamValidator\ParamValidator;
 
 class DeleteSessionHandler extends CollabSessionHandlerBase {
 
+	/**
+	 * @return Response
+	 * @throws InvalidArgumentException
+	 */
 	public function run() {
 		$request = $this->getRequest();
-		$pageNamespace = $request->getPathParam( "pageNamespace" );
-		$pageTitle = $request->getPathParam( "pageTitle" );
-		$pageTitle = $this->unmaskPageTitle( $pageTitle );
+
+		$pageNamespaceRaw = $request->getPathParam( "pageNamespace" );
+		$pageTitleRaw = $request->getPathParam( "pageTitle" );
+
+		if ( !$pageNamespaceRaw || !$pageTitleRaw ) {
+			throw new InvalidArgumentException( 'Missing required path parameters' );
+		}
+
+		if ( !ctype_digit( $pageNamespaceRaw ) ) {
+			throw new InvalidArgumentException( 'Invalid namespace parameter' );
+		}
+
+		$pageNamespace = (int)$pageNamespaceRaw;
+		$pageTitle = $this->unmaskPageTitle( $pageTitleRaw );
 
 		$this->collabSessionManager->deleteSession( $pageNamespace, $pageTitle );
 

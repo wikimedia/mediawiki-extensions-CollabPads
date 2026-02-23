@@ -10,7 +10,21 @@ class SetSessionHandler extends CollabSessionHandlerBase {
 		$request = $this->getRequest();
 		$user = RequestContext::getMain()->getUser();
 
-		$args = json_decode( $request->getBody()->getContents(), JSON_UNESCAPED_SLASHES );
+		$args = json_decode( $request->getBody()->getContents() );
+
+		if ( !is_array( $args ) ) {
+			return $this->getResponseFactory()->createJson( [
+				'success' => false,
+				'error' => 'Invalid JSON body'
+			] );
+		}
+
+		if ( !isset( $args['pageTitle'] ) || !isset( $args['pageNamespace'] ) ) {
+			return $this->getResponseFactory()->createJson( [
+				'success' => false,
+				'error' => 'Missing required parameters'
+			] );
+		}
 
 		$pageName = str_replace( " ", "_", $args['pageTitle'] );
 		$session = $this->collabSessionManager->getSession( $args['pageNamespace'], $pageName );

@@ -14,4 +14,6 @@ interface CollabPadsAfterAddContentActionHook {
 	 * @param ITemplateDataProvider $registry
 	 */
 	public function onCollabPadsAfterAddContentAction( Title $title, ITemplateDataProvider $registry ): void;
+
+	// @phan-suppress-previous-line PhanUndeclaredTypeParameter
 }
