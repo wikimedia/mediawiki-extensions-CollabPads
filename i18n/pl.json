@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Woytecr"
+		]
+	},
+	"collabpads-desc": "Umożliwia wspólną edycję stron wiki",
+	"collabpads-start-dialog-show-again": "Nie pokazuj więcej tego komunikatu",
+	"collabpads-toolbar-save-button": "Zapisz zmiany...",
+	"collabpads-toolbar-save-button-label": "Zapisz",
+	"collabpads-save-dialog-title": "Zapisz swoje zmiany",
+	"collabpads-save-dialog-save-button-label": "Zapisz",
+	"collabpads-save-dialog-summary": "Opis zmian:",
+	"collabpads-save-dialog-minor-edit": "To jest drobna zmiana",
+	"collabpads-save-dialog-watch-page": "Obserwuj tę stronę",
+	"collabpads-author-join": "{{GENDER:$2|Dołączył|Dołączyła}} $1",
+	"collabpads-author-leave": "$1 {{GENDER:$2|wyszedł|wyszła}}",
+	"collabpads-author-save": "$1 {{GENDER:$2|zapisał|zapisała}}",
+	"collabpads-already-participating-message": "Już edytujesz tę stronę",
+	"collabpads-namespace-label": "Przestrzeń nazw",
+	"collabpads-page-label": "Strona",
+	"collabpads-owner-label": "Właściciel",
+	"collabpads-participants-label": "Uczestnicy"
+}
