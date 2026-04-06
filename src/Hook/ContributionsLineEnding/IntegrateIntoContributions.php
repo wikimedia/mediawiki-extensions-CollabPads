@@ -72,7 +72,7 @@ class IntegrateIntoContributions
 	public function onSpecialContributions__formatRow__flags( $context, $row, &$flags ) {
 		$collapPadSession = $this->collabRevisionManager->getSessionByRevId( $row->rev_id );
 		if ( $collapPadSession ) {
-			array_unshift( $flags, ChangesList::flag( 'collab-edit' ) );
+			array_unshift( $flags, ChangesList::flag( 'collab-edit', $context ) );
 		}
 	}
 
