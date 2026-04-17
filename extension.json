@@ -71,6 +71,11 @@
 	"AvailableRights": [
 		"collabpadsessions-admin"
 	],
+	"GrantPermissions": {
+		"editprotected": {
+			"collabpadsessions-admin": true
+		}
+	},
 	"RecentChangesFlags": {
 		"collab-edit": {
 			"letter": "collabpads-recentchangesflags-letter",
