@@ -383,7 +383,7 @@
 		},
 		"bs.socket.io": {
 			"scripts": [
-				"socket.io/socket.io.min.js"
+				"lib/socket.io-client/socket.io.js"
 			]
 		},
 		"collabpad.ui.participants.styles": {
@@ -413,6 +413,7 @@
 		"localBasePath": "resources",
 		"remoteExtPath": "CollabPads/resources"
 	},
+	"ForeignResourcesDir": "resources/lib",
 	"Actions": {
 		"collab-edit": "EditAction"
 	},
