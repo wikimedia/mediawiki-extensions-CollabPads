@@ -53,7 +53,7 @@ collabpad.store.Sessions.prototype.doLoadData = function () {
 				const filterValue = this.filters[ field ].value.value;
 				if (
 					Array.isArray( fieldValue ) &&
-					fieldValue.some( ( v ) => v.indexOf( filterValue ) >= 0 )
+					fieldValue.some( ( v ) => v.includes( filterValue ) )
 				) {
 					return false;
 				}
