@@ -6,6 +6,7 @@ use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\CollabPads\CollabSessionManager;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Rest\HttpException;
+use MediaWiki\Rest\Response;
 use Wikimedia\ParamValidator\ParamValidator;
 
 class GetSessionsHandler extends CollabSessionHandlerBase {
@@ -25,6 +26,9 @@ class GetSessionsHandler extends CollabSessionHandlerBase {
 		$this->permissionManager = $permissionManager;
 	}
 
+	/**
+	 * @return Response
+	 */
 	public function run() {
 		$owner = $this->getOwnerParam();
 		if ( $owner === '*' ) {

@@ -3,9 +3,13 @@
 namespace MediaWiki\Extension\CollabPads\Api\Rest;
 
 use MediaWiki\Context\RequestContext;
+use MediaWiki\Rest\Response;
 
 class SetSessionHandler extends CollabSessionHandlerBase {
 
+	/**
+	 * @return Response
+	 */
 	public function run() {
 		$request = $this->getRequest();
 		$user = RequestContext::getMain()->getUser();
