@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\CollabPads;
 
-use ObjectCacheFactory;
+use MediaWiki\ObjectCache\ObjectCacheFactory;
 use Wikimedia\Rdbms\IConnectionProvider;
 use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\Platform\ISQLPlatform;
