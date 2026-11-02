@@ -2,6 +2,7 @@
 
 namespace MediaWiki\Extension\CollabPads\HookHandler;
 
+use MediaWiki\Exception\PermissionsError;
 use MediaWiki\Extension\CollabPads\CollabPadAccessTokenDAO;
 use MediaWiki\Hook\MediaWikiPerformActionHook;
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
@@ -11,7 +12,6 @@ use MediaWiki\Skin\SkinTemplate;
 use MediaWiki\Title\NamespaceInfo;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
-use PermissionsError;
 use Wikimedia\Rdbms\LoadBalancer;
 
 class CollabEditActionHookHandler implements
