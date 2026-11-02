@@ -7,6 +7,7 @@ use MediaWiki\Hook\MediaWikiPerformActionHook;
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\Message\Message;
 use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\Skin\SkinTemplate;
 use MediaWiki\Title\NamespaceInfo;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
@@ -42,7 +43,7 @@ class CollabEditActionHookHandler implements
 
 	/**
 	 * // phpcs:disable MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName
-	 * @param \SkinTemplate $skinTemplate
+	 * @param SkinTemplate $skinTemplate
 	 * @param array &$links
 	 */
 	public function onSkinTemplateNavigation__Universal( $skinTemplate, &$links ): void {
