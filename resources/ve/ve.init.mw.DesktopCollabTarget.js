@@ -63,7 +63,7 @@ ve.init.mw.DesktopCollabTarget.prototype.attachToolbar = function () {
 
 ve.init.mw.DesktopCollabTarget.prototype.setupToolbar = function () {
 	ve.init.mw.DesktopCollabTarget.super.prototype.setupToolbar.apply( this, arguments );
-	this.toolbarSaveButton = this.actionsToolbar.getToolGroupByName( 'export' ).items[ 0 ];
+	this.toolbarSaveButton = this.toolbar.getToolGroupByName( 'export' ).items[ 0 ];
 };
 
 ve.init.mw.DesktopCollabTarget.prototype.setDirty = function ( value ) {
