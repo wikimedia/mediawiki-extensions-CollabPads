@@ -55,13 +55,17 @@ ve.init.mw.CollabTarget.static.toolbarGroups =
 ve.init.mw.CollabTarget.static.importRules = ve.copy( ve.init.mw.CollabTarget.static.importRules );
 ve.init.mw.CollabTarget.static.importRules.external.blacklist[ 'link/mwExternal' ] = false;
 
-ve.init.mw.CollabTarget.static.actionGroups = [
+ve.init.mw.CollabTarget.static.toolbarGroups.push(
 	{
 		name: 'help',
+		align: 'after',
+		excludeFromTargetWidget: true,
 		include: [ 'help' ]
 	},
 	{
 		name: 'pageMenu',
+		align: 'after',
+		excludeFromTargetWidget: true,
 		type: 'list',
 		icon: 'menu',
 		indicator: null,
@@ -72,23 +76,31 @@ ve.init.mw.CollabTarget.static.actionGroups = [
 	},
 	{
 		name: 'authorList',
+		align: 'after',
+		excludeFromTargetWidget: true,
 		include: [ 'collab-authorList' ]
 	},
 	{
 		name: 'reset-changes',
+		align: 'after',
+		excludeFromTargetWidget: true,
 		include: [ 'collabpad-reset-changes' ],
 		classes: [ 'collabpad-reset-changes-button' ]
 	},
 	{
 		name: 'leave',
+		align: 'after',
+		excludeFromTargetWidget: true,
 		include: [ 'collabpad-leave' ],
 		classes: [ 'collabpad-leave-button' ]
 	},
 	{
 		name: 'export',
+		align: 'after',
+		excludeFromTargetWidget: true,
 		include: [ 'collabpad-export' ]
 	}
-];
+);
 
 /* Methods */
 
