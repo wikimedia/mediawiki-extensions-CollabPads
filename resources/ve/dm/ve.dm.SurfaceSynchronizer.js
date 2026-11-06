@@ -45,6 +45,7 @@ ve.dm.SurfaceSynchronizer = function VeDmSurfaceSynchronizer( surface, documentI
 	this.serverId = null;
 	this.loadSessionKey();
 	this.paused = false;
+	this.disconnectedOnPageHide = false;
 
 	// SocketIO events
 	const pathParts = config.server.split( '/' );
@@ -71,6 +72,14 @@ ve.dm.SurfaceSynchronizer = function VeDmSurfaceSynchronizer( surface, documentI
 	// Bug fix: wire the built-in Socket.IO disconnect event so the client
 	// reacts to dropped connections and can re-sync on reconnect.
 	this.socket.on( 'disconnect', this.onDisconnect.bind( this ) );
+
+	// Browsers may freeze the page (e.g. back/forward cache) without closing the
+	// WebSocket, so the server keeps treating this author as connected and rejects
+	// a quick rejoin with "alreadyLoggedIn". Disconnect explicitly when leaving.
+	this.onPageHideHandler = this.onPageHide.bind( this );
+	this.onPageShowHandler = this.onPageShow.bind( this );
+	window.addEventListener( 'pagehide', this.onPageHideHandler );
+	window.addEventListener( 'pageshow', this.onPageShowHandler );
 
 	this.authorData = ve.init.platform.sessionStorage.getObject( 've-collab-author' );
 	if ( this.authorData ) {
@@ -134,10 +143,32 @@ OO.mixinClass( ve.dm.SurfaceSynchronizer, ve.dm.RebaseClient );
  * Destroy the synchronizer
  */
 ve.dm.SurfaceSynchronizer.prototype.destroy = function () {
+	window.removeEventListener( 'pagehide', this.onPageHideHandler );
+	window.removeEventListener( 'pageshow', this.onPageShowHandler );
 	this.socket.disconnect();
 	this.doc.disconnect( this );
 	this.surface.disconnect( this );
 	this.initialized = false;
+};
+
+/**
+ * Disconnect from the server when the page is unloaded or frozen
+ */
+ve.dm.SurfaceSynchronizer.prototype.onPageHide = function () {
+	this.disconnectedOnPageHide = this.socket.connected;
+	this.socket.disconnect();
+};
+
+/**
+ * Rejoin the session when the page is restored from the back/forward cache
+ *
+ * @param {PageTransitionEvent} e
+ */
+ve.dm.SurfaceSynchronizer.prototype.onPageShow = function ( e ) {
+	if ( e.persisted && this.disconnectedOnPageHide ) {
+		// The local document state is stale; reload to get a clean session
+		window.location.reload();
+	}
 };
 
 /**
