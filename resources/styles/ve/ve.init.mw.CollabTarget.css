@@ -34,7 +34,7 @@
 }
 
 /* Hide cursor label user name */
-.ve-ce-surface-selections-otherUserCursor .ve-ce-surface-selection-label {
+.ve-ce-surface-selections-otherUserSelection .ve-ce-surface-selection-label {
 	pointer-events: auto;
 	width: 12px;
 	height: 1.3em !important;
@@ -43,12 +43,8 @@
 }
 
 /* Show cursor label user name on hover */
-.ve-ce-surface-selections-otherUserCursor-inactive:hover {
+.ve-ce-surface-selections-otherUserSelection .ve-ce-surface-selection-label:hover {
 	opacity: 1;
-}
-
-/* Show cursor label user name on hover */
-.ve-ce-surface-selections-otherUserCursor .ve-ce-surface-selection-label:hover {
 	width: unset;
 	color: black !important;
 	background-color: #f1f3f9 !important;

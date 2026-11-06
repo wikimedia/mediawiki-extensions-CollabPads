@@ -320,7 +320,11 @@
 		"ext.CollabPads.rebase": {
 			"scripts": [
 				"ve/dm/ve.dm.RebaseClient.js",
-				"ve/dm/ve.dm.SurfaceSynchronizer.js"
+				"ve/dm/ve.dm.SurfaceSynchronizer.js",
+				"ve/ce/ve.ce.SurfaceSynchronizer.js"
+			],
+			"styles": [
+				"styles/ve/ve.ce.SurfaceSynchronizer.less"
 			],
 			"dependencies": [
 				"ext.CollabPads.collabTarget.init",
@@ -336,6 +340,8 @@
 				"visualeditor-rebase-corrupted-document-error",
 				"visualeditor-rebase-corrupted-document-title",
 				"visualeditor-rebase-client-connecting",
+				"visualeditor-rebase-missing-document-error",
+				"visualeditor-rebase-missing-document-title",
 				"visualeditor-template-tools-definition.json",
 				"collabpads-author-join",
 				"collabpads-author-leave",
