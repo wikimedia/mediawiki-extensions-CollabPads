@@ -367,9 +367,8 @@ ve.dm.SurfaceSynchronizer.prototype.getAuthorData = function ( authorId ) {
 		authorId = this.getAuthorId();
 	}
 	// This is not very nice, as we are hotswapping the name and realName, but alternative is
-	// Overriding ve.ce.Surface, so nope.
-	// Needed because surface will use `name` for the label on the cursor
-	// (line 5519: label: authorData.name)
+	// Overriding ve.ce.SurfaceSynchronizer, so nope.
+	// Needed because ve.ce.SurfaceSynchronizer#paintAuthor will use `name` for the label on the cursor
 	const data = Object.assign( {}, this.authors[ authorId ] );
 	data.name = data.realName || data.name;
 	return data;
