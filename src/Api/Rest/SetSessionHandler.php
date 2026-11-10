@@ -14,19 +14,34 @@ class SetSessionHandler extends CollabSessionHandlerBase {
 		$request = $this->getRequest();
 		$user = RequestContext::getMain()->getUser();
 
-		$args = json_decode( $request->getBody()->getContents(), JSON_UNESCAPED_SLASHES );
+		$args = json_decode( $request->getBody()->getContents(), true );
 
+		if ( !is_array( $args ) ) {
+			return $this->getResponseFactory()->createJson( [
+				'success' => false,
+				'error' => 'Invalid JSON body'
+			] );
+		}
+
+		if ( !isset( $args['pageTitle'] ) || !isset( $args['pageNamespace'] ) ) {
+			return $this->getResponseFactory()->createJson( [
+				'success' => false,
+				'error' => 'Missing required parameters'
+			] );
+		}
+
+		$pageNamespace = (int)$args['pageNamespace'];
 		$pageName = str_replace( " ", "_", $args['pageTitle'] );
-		$session = $this->collabSessionManager->getSession( $args['pageNamespace'], $pageName );
+		$session = $this->collabSessionManager->getSession( $pageNamespace, $pageName );
 
-		if ( $session['sessionId'] ) {
+		if ( !empty( $session['sessionId'] ) ) {
 			$sessionParticipants = unserialize( $session[ 'participants' ] );
 			$sessionParticipants[] = $user->getName();
 			$sessionParticipants = array_unique( $sessionParticipants );
 			$this->collabSessionManager->setParticipants( $sessionParticipants, $session[ 'sessionId' ] );
 		} else {
 			$this->collabSessionManager->insertSession(
-				$args['pageNamespace'],
+				$pageNamespace,
 				$pageName,
 				$user->getName(),
 				[ $user->getName() ]
